@@ -1,17 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
-
 @import url(http://fonts.googleapis.com/css?family=Comfortaa:400,700|Oleo+Script:400,700|Prosto+One|Aladin|Montserrat|Francois+One|Nunito|Viga);
-/*
-font-family: 'Comfortaa', cursive;
-font-family: 'Oleo Script', cursive;
-font-family: 'Prosto One', cursive;
-font-family: 'Aladin', cursive;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Francois One', sans-serif;
-font-family: 'Nunito', sans-serif;
-font-family: 'Viga', sans-serif;
-*/
+
 
 #contenidoBody .boxCtn > h1 {
 	text-transform:uppercase !important;
@@ -756,4 +745,11 @@ ol {
 	.rightColumnHiddenReserva {
 		display:none;
 	}
+}
+
+/*Adding styles*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px;
+  }
 }
