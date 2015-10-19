@@ -45,5 +45,6 @@
     </div>
 
     <?php $this->load->view("layouts/default/footer.php"); ?>
+    <?php $this->load->view('layouts/default/require_js.php'); ?>
 </body>
 <html>

@@ -43,19 +43,19 @@
             <h2 class="barra"><i class="glyphicon glyphicon-cloud"></i> SIGUENOS</h2>
             <p class="text-center">
                 <a href="http://www.facebook.com/lasercentervision2020" target="_blank">
-                    <img src="/images/icon/facebook.jpg" width="164" height="43" />
+                    <img src="<?php echo base_url('assets/images/icon/facebook.jpg') ?>" width="164" height="43" />
                 </a>
             </p>
 
             <p class="text-center">
                 <a href="https://www.youtube.com/user/LCVision2020" target="_blank">
-                    <img src="/images/icon/youtube.jpg" width="164" height="43" />
+                    <img src="<?php echo base_url('assets/images/icon/youtube.jpg') ?>" width="164" height="43" />
                 </a>
             </p>
 
             <p class="text-center">
                 <a href="https://twitter.com/LCVision2020" target="_blank">
-                    <img src="/images/icon/twitter.jpg" width="164" height="43" />
+                    <img src="<?php echo base_url('assets/images/icon/twitter.jpg') ?>" width="164" height="43" />
                 </a>
             </p>
         </div>
