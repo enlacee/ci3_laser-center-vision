@@ -3,13 +3,21 @@
 <script type="text/javascript" src="<?php echo base_url('assets/js/script.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/css/menu-clean/js/maps.js') ?>"></script>
 <?php echo $this->layout->js; ?>
-
-<?php if (!empty($stringJs)) : ?>
 <script type="text/javascript">
 	console.log('123');
-	<?php echo $stringJs ?>
 </script>
-<?php endif; ?>
 <script type="text/javascript">
-	console.log('123');
+	$(function(){
+		$().lynxmenu();
+		/**
+		* Add Class nav nav-pills
+		* Function Menu Justificado
+		*/
+		var widthWindow = $( window ).width();
+		if(widthWindow < 768){
+			$( ".menu .lynx-menu.green li span.icon" ).css("float","right");
+			$( ".menu .lynx-menu.green li span.icon" ).css("margin-right","10px");
+			$( ".menu .lynx-menu.green li" ).first().append("<span class='menuTxt'>MENU</span>");
+		}
+	});
 </script>
