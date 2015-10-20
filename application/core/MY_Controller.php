@@ -4,12 +4,16 @@ if (! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Controller extends CI_Controller
 {
     public $data = array();
+    const CACHE_TIME = 600;
+
+
+
 
     function __construct ()
     {
         parent::__construct();
-        $this->load->driver('cache');
-        //$this->load->library(array('layout'));
+        //$this->load->library(array('layout', 'breadcrumbs', 'database'));
+        //$this->load->driver('cache');
 
         //ENVIRONMENT != 'development' || $this->output->enable_profiler(TRUE);
         //$this->data['user'] = 'Joost';

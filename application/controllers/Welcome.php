@@ -18,12 +18,11 @@ class Welcome extends Public_Controller {
 		$this->layout->setSocialResumen("Resumen");
 		$this->layout->setSocialDescripcion("Description");
 
-var_dump($this->getPostByCategory(''));exit;
-		$parameter = array(
-			'data' => $this->getPostByCategory()
+		$params = array(
+			'data' => $this->getPostByCategory('')
 		);
 		//Layout load view
-		$this->layout->view('frontend/welcome/index', $parameters);
+		$this->layout->view('frontend/welcome/index', $params);
 	}
 
 
@@ -32,6 +31,7 @@ var_dump($this->getPostByCategory(''));exit;
 	{
 		// ----- init pagination
         $limit = 6;
+		$page = 0;
         $count = $this->Post_model->listAll('post',$status='', $order='', $limit, $offset='', $rows=true);
 
         if ($count > 0) {

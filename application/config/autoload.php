@@ -73,7 +73,7 @@ $autoload['libraries'] = array('layout', 'breadcrumbs', 'database');
 |
 |	$autoload['drivers'] = array('cache');
 */
-$autoload['drivers'] = array();
+$autoload['drivers'] = array('cache');
 
 /*
 | -------------------------------------------------------------------

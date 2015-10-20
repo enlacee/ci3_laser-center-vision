@@ -3,3 +3,10 @@
 /node_modules
 /assets/lib/*
 !/assets/lib/empty.txt
+/nbproject/private/
+
+## ci
+/application/cache
+
+## ide
+/nbproject

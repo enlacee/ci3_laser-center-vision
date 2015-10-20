@@ -52,31 +52,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-/**
- * routes
- */
-
-//Section example
-$route['section'] = 'Welcome/index';
-
-//Section example
-$route['register'] = 'register';
-
-
-
-/**
- * Backend routes
- */
-
-//Section list (application/backend/list.php)
-$route['admin'] = 'backend/login';
-
-//Section list (application/backend/list.php)
-$route['admin/listado'] = 'backend/listing';
-
-//Section add (application/backend/add.php)
-$route['admin/agregar'] = 'backend/add';
-
-//Section edit (application/backend/edit.php)
-$route['admin/editar'] = 'backend/edit';
