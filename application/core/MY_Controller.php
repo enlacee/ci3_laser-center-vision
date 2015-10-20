@@ -8,6 +8,8 @@ class MY_Controller extends CI_Controller
     function __construct ()
     {
         parent::__construct();
+        $this->load->driver('cache');
+        //$this->load->library(array('layout'));
 
         //ENVIRONMENT != 'development' || $this->output->enable_profiler(TRUE);
         //$this->data['user'] = 'Joost';
