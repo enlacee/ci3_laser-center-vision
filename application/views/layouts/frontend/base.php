@@ -27,15 +27,15 @@
 <meta name="twitter:site" 			content="<?php echo $this->config->item('cs_twitter'); ?>"/>
 <meta name="twitter:creator" 		content="Por definir"/>
 
-<link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/custom_bootstrap.css">
-<link rel="stylesheet" type="text/css" href="assets/lib/formvalidation.io/dist/css/formValidation.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/font.css">
-<link rel="stylesheet" type="text/css" href="assets/css/base.css">
-<link rel="stylesheet" type="text/css" href="assets/css/config.css">
-<link rel="stylesheet" type="text/css" href="assets/css/main_home.css">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/lib/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/custom_bootstrap.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/lib/formvalidation.io/dist/css/formValidation.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/font.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/base.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/config.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/main_home.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
 <script type="text/javascript" src="assets/lib/respond/dest/respond.min.js"></script>
 
 <!--Add CSS (Layout)-->
