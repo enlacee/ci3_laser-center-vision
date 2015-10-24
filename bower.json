@@ -1,13 +1,17 @@
 {
-  "name": "ci2.base",
-  "homepage": "https://github.com/enlacee/ci2.base",
+  "name": "Proyecto base",
   "authors": [
-    "Anibal C <detops.tk@gmail.com>"
+    "Luis Figuera <milindex@gmail.com>"
   ],
-  "description": "marco base",
-  "main": "",
+  "description": "Proyecto base para desarrollo web realizado en Codeigniter.",
+  "main": "index.php",
   "moduleType": [],
+  "keywords": [
+    "Codeigniter",
+    "librerias"
+  ],
   "license": "MIT",
+  "homepage": "/",
   "ignore": [
     "**/.*",
     "node_modules",
