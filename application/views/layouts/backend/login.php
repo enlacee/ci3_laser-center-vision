@@ -1,7 +1,7 @@
-<?php $this->load->view("layouts/backend/inc/head_top.php"); ?>
+<?php $this->load->view("layouts/backend/base/head_top.php"); ?>
 
 <!-- No show head home and closed tag head and open tag body-->
-<?php //$this->load->view("layouts/backend/inc/head_bottom.php"); ?>
+<?php //$this->load->view("layouts/backend/base/head_bottom.php"); ?>
 </head>
 <body>
 
@@ -10,9 +10,9 @@
 <?php echo $content_for_layout; ?>
 <!--/ body-->
 
-<?php $this->load->view("layouts/backend/inc/footer.php"); ?>
+<?php $this->load->view("layouts/backend/base/footer.php"); ?>
 
-<?php $this->load->view("layouts/backend/inc/footer_lib.php"); ?>
+<?php $this->load->view("layouts/backend/base/footer_lib.php"); ?>
 
 <script type="text/javascript">
 
@@ -54,5 +54,5 @@ $(document).ready(function() {
 });
 </script>
 
-<?php $this->load->view("layouts/backend/inc/footer_closed.php"); ?>
+<?php $this->load->view("layouts/backend/base/footer_closed.php"); ?>
 

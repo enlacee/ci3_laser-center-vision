@@ -46,7 +46,7 @@ class Layout
 	 *
 	 * Inicializa la instancia de CodeIgniter y setea el layout por defecto
 	 */
-	public function __construct($layout = 'layouts/default')
+	public function __construct($layout = 'layouts/frontend/base')
 	{
 		$this->CI		=& get_instance();
 		$this->layout	= $layout;

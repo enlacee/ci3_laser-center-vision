@@ -27,19 +27,19 @@
 <meta name="twitter:site" 			content="<?php echo $this->config->item('cs_twitter'); ?>"/>
 <meta name="twitter:creator" 		content="Por definir"/>
 
-<link rel="stylesheet" type="text/css" href="/assets/lib/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="/assets/lib/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/custom_bootstrap.css">
-<link rel="stylesheet" type="text/css" href="/assets/lib/formvalidation/dist/css/formValidation.min.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/font.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/base.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/config.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/main_home.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-<script type="text/javascript" src="/assets/lib/respond/dest/respond.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/custom_bootstrap.css">
+<link rel="stylesheet" type="text/css" href="assets/lib/formvalidation.io/dist/css/formValidation.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font.css">
+<link rel="stylesheet" type="text/css" href="assets/css/base.css">
+<link rel="stylesheet" type="text/css" href="assets/css/config.css">
+<link rel="stylesheet" type="text/css" href="assets/css/main_home.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script type="text/javascript" src="assets/lib/respond/dest/respond.min.js"></script>
 
 <!--Add CSS (Layout)-->
-<?php echo $this->layout->css; ?> 
+<?php echo $this->layout->css; ?>
 <!--End add CSS-->
 
 </head>
@@ -50,25 +50,25 @@
 
 
 	<!-- Header -->
-	<?php $this->load->view("layouts/frontend/inc/header.php"); ?>
+	<?php $this->load->view("layouts/frontend/base/header.php"); ?>
 	<!--/ Header -->
 
 
 	<!-- Main -->
-	<?php $this->load->view("layouts/frontend/inc/main.php"); ?>
+	<?php $this->load->view("layouts/frontend/base/main.php"); ?>
 	<!--/ Main -->
 
 
 	<!-- Slider -->
-	<?php $this->load->view("layouts/frontend/inc/slider.php"); ?>
+	<?php $this->load->view("layouts/frontend/base/slider.php"); ?>
 	<!--/ Slider -->
 
-	
+
 	<!-- Body ctn -->
 	<div class="row body_ctn">
 
 		<!-- Column left -->
-		<?php $this->load->view("layouts/frontend/inc/left.php"); ?>
+		<?php $this->load->view("layouts/frontend/base/left.php"); ?>
 		<!--/ Column left -->
 
 
@@ -78,7 +78,7 @@
 
 
 		<!-- Column right -->
-		<?php $this->load->view("layouts/frontend/inc/right.php"); ?>
+		<?php $this->load->view("layouts/frontend/base/right.php"); ?>
 		<!--/ Column right-->
 
 	</div>
@@ -86,7 +86,7 @@
 
 
 	<!-- Footer -->
-	<?php $this->load->view("layouts/frontend/inc/footer.php"); ?>
+	<?php $this->load->view("layouts/frontend/base/footer.php"); ?>
 	<!--/ Footer -->
 
 
@@ -95,12 +95,12 @@
 
 
 <!-- Copyright -->
-<?php $this->load->view("layouts/frontend/inc/copyright.php"); ?>
+<?php $this->load->view("layouts/frontend/base/copyright.php"); ?>
 <!--/ Copyright -->
 
 
 <!--Footer libraries-->
-<?php $this->load->view("layouts/frontend/inc/footer_lib.php"); ?>
+<?php $this->load->view("layouts/frontend/base/footer_lib.php"); ?>
 <!--/ Footer libraries-->
 
 

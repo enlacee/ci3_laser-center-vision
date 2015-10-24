@@ -1,15 +1,15 @@
 
-<?php $this->load->view("layouts/backend/inc/head_top.php"); ?>
+<?php $this->load->view("layouts/backend/base/head_top.php"); ?>
 
-<?php $this->load->view("layouts/backend/inc/head_bottom.php"); ?>
+<?php $this->load->view("layouts/backend/base/head_bottom.php"); ?>
 
 <!--Body-->
 <?php echo $content_for_layout; ?>
 <!--End body-->
 
-<?php $this->load->view("layouts/backend/inc/footer.php"); ?>
+<?php $this->load->view("layouts/backend/base/footer.php"); ?>
 
-<?php $this->load->view("layouts/backend/inc/footer_lib.php"); ?>
+<?php $this->load->view("layouts/backend/base/footer_lib.php"); ?>
 
 <script type="text/javascript" src="/assets/backend/lib/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
@@ -82,5 +82,5 @@ tinymce.init({
  });
 </script>
 
-<?php $this->load->view("layouts/backend/inc/footer_closed.php"); ?>
+<?php $this->load->view("layouts/backend/base/footer_closed.php"); ?>
 
