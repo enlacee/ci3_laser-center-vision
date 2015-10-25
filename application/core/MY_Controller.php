@@ -14,8 +14,7 @@ class MY_Controller extends CI_Controller
         parent::__construct();
         //$this->load->library(array('layout', 'breadcrumbs', 'database'));
         //$this->load->driver('cache');
-
-        //ENVIRONMENT != 'development' || $this->output->enable_profiler(TRUE);
+        ENVIRONMENT != 'development' || $this->output->enable_profiler(TRUE);
         //$this->data['user'] = 'Joost';
     }
 

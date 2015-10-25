@@ -53,13 +53,11 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
 /**
  * routes
  */
 //Section example
 $route['seccion'] = 'frontend/section_ejemplo';
-
 
 /**
  * Backend routes
@@ -76,3 +74,16 @@ $route['admin/agregar'] = 'backend/add';
 
 //Section edit (application/backend/edit.php)
 $route['admin/editar'] = 'backend/edit';
+
+/**
+* Config URL
+* example:
+*   /es/titulo-del-lunes-878
+*   /titulo-del-lunes-878
+*/
+/*
+$route['^(\w{2})/(.*)$'] = '$2';
+$route['^(\w{2})$'] = $route['default_controller'];
+*/
+$route['^(\w{2})/(.*)'] = "post/index";
+$route['^(.*)'] = "post";

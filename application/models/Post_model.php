@@ -8,12 +8,12 @@
 class Post_model  extends CI_Model {
 
     protected $_name = 'ac_posts';
-/*
+
     const TIPO_POST = 'post';
     const TIPO_PAGE = 'page';
 
     const STATUS_TRUE = 1;
-    const STATUS_FALSE = 0;*/
+    const STATUS_FALSE = 0;
 
     public function __construct() {
     //    parent::__construct();
@@ -23,8 +23,9 @@ class Post_model  extends CI_Model {
     /***
      * list of post (lastest news)
      */
-    public function listAll(
+    public function getAll(
         $post_type = Post_model::TIPO_POST,
+        $category = '',
         $status = '',
         $order = 'desc',
         $limit = 10,
@@ -34,11 +35,14 @@ class Post_model  extends CI_Model {
 
         $str_post_type = str_replace('-', '_', $post_type);
         $strRows = (int) $rows;
-        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $str_post_type.'_'.$status.'_'.$strRows.'_'.$order.$limit.'_'.$offset;
+        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $str_post_type.$category.'_'.$status.'_'.$strRows.'_'.$order.$limit.'_'.$offset;
 
         if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
             $this->db->select()->from($this->_name);
             $this->db->where('post_type', $post_type);
+            if(!empty($category)) {
+                $this->db->where('category', $category);
+            }
             if(!empty($status)) {
                 $this->db->where('status', $status);
             }

@@ -14,6 +14,6 @@
 		"php": ">=5.2.4"
 	},
 	"require-dev": {
-		
+		"jbroadway/urlify": "~1.0"
 	}
 }

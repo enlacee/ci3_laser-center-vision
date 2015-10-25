@@ -10,3 +10,7 @@
 
 ## ide
 /nbproject
+
+## composer
+/vendor
+/composer.lock

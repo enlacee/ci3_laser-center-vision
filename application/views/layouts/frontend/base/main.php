@@ -5,14 +5,20 @@
 				<span class="text1">MENU</span>
 				<i class="fa fa-times-circle"></i>
 			</li>
-			<li><a href="#" class="m_home active">Inicio</a></li>
-			<li><a href="#" class="m_clinica">La clinica</a></li>
-			<li><a href="#" class="m_servicios">Servicios</a></li>
-			<li><a href="#" class="m_preguntas">Preguntas</a></li>
-			<li><a href="#" class="m_videos">Videos y testimonios</a></li>
-			<li><a href="#" class="m_ubicacion">Ubicaci&oacute;n</a></li>
-			<li><a href="#" class="m_cita">Cita virtual</a></li>
-			<li><a href="#" class="m_contacto">Contacto</a></li>
+			<?php $pagesMenu = $this->load->get_var('pagesMenu'); if(!empty($pagesMenu) && count($pagesMenu) > 0) : ?>
+			<?php $classMenu = array('m_home','m_clinica','m_servicios','m_preguntas','m_videos','m_ubicacion','m_cita','m_contacto'); ?>
+				<?php foreach ($pagesMenu as $key => $value) : ?>
+					<?php
+					$activeClass = '';
+					$stringClass = '' . $classMenu[$key] . ' ' . $activeClass ;
+					$keyNameTitle = getIdLangString('title');
+					$urlFriendly = URLify::filter($value[$keyNameTitle])
+					?>
+					<li><a class="<?php echo $stringClass ?>" href="<?php echo base_url_lang($urlFriendly) ?>"><?php echo $value[$keyNameTitle] ?></a></li>
+				<?php endforeach; ?>
+			<?php else: ?>
+				<li><a href="#">no found data</a></li>
+			<?php endif; ?>
 		</ul>
 		<i class="fa fa-bars oculto"></i>
 	</nav>

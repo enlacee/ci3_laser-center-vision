@@ -5,10 +5,10 @@
 
 			<!-- Box -->
 			<div class="box">
-				<h3><i class="fa fa-check-square-o"></i>CIRUGIA</h3>
+				<h3><i class="fa fa-check-square-o"></i><?php echo strtoupper(lang('msg_cirugia')) ?></h3>
 				<ul>
 					<li><a href="#">Miopía - Astigmatismo</a></li>
-					<li><a href="#">Hipermetropía - Presbicia</a></li>
+					<li><a href="#">Hipermetropía - Presbicia</a></li>)
 					<li><a href="#">Catarata</a></li>
 					<li><a href="#">Queratocono</a></li>
 					<li><a href="#">Glaucoma</a></li>
@@ -22,7 +22,7 @@
 
 			<!-- Box -->
 			<div class="box">
-				<h3><i class="fa fa-globe"></i>TECNOLOGIA</h3>
+				<h3><i class="fa fa-globe"></i><?php echo strtoupper(lang('msg_thecnologie')) ?></h3>
 				<ul>
 					<li><a href="#">Excimer Laser</a></li>
 					<li><a href="#">Faco - Infiniti</a></li>
@@ -34,7 +34,7 @@
 
 			<!-- Box -->
 			<div class="box">
-				<h3><i class="fa fa-leaf"></i>EXAMENES</h3>
+				<h3><i class="fa fa-leaf"></i><?php echo strtoupper(lang('msg_quizs')) ?></h3>
 				<ul>
 					<li><a href="#">Pentacam</a></li>
 					<li><a href="#">Topografía/Keratograph</a></li>
@@ -51,7 +51,7 @@
 
 			<!-- Box -->
 			<div class="box">
-				<h3><i class="fa fa-share-alt"></i>SIGUENOS</h3>
+				<h3><i class="fa fa-share-alt"></i><?php echo strtoupper(lang('msg_follow_us')) ?></h3>
 				<a href="#" target="_blank">
 					<img src="assets/images/logos/facebook.jpg" alt="Siguenos en Facebook">
 				</a>
@@ -66,14 +66,14 @@
 
 			<!-- Box -->
 			<div class="box">
-				<h3><i class="fa fa-check-square-o"></i>CIRUGÍAS</h3>
+				<h3><i class="fa fa-check-square-o"></i><?php echo strtoupper(lang('msg_cirugias')) ?></h3>
 				<p>Cirugías realizadas este año en la clínica.</p>
 				<div class="panel panel-default">
 					<table class="table table-hover table-bordered table-condensed table-striped">
 						<tbody>
 							<?php for( $i=1; $i<=18; $i++ ): ?>
 							<tr>
-								<td><?php echo "Cirugía"; ?></td>
+								<td><?php echo strtoupper(lang('msg_cirugia')) ?></td>
 								<td><?php echo $i; ?></td>
 							</tr>
 						<?php endfor; ?>

@@ -8,8 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Call config example: <?php echo $this->config->item("cs_lang"); ?>
  */
 
-//URL 
-
 //Languaje site
 $config['cs_lang'] = 'es';
 
@@ -50,6 +48,22 @@ $config['cs_youtube'] = '@youtube';
 $config['cs_instagram'] = '@instagram';
 
 
+/**
+* Extra by anibal
+* default language
+*/
+$config['cs_languages'] = array('es' => 'spanish', 'en' => 'english');
 
+$selfbase = str_replace('index.php', '', $_SERVER['PHP_SELF']);
+$arrayUri = explode('/', str_replace($selfbase, '', $_SERVER['REQUEST_URI']));
 
-
+if (isset($arrayUri[0]) && strlen($arrayUri[0]) == 2) {
+    if (array_key_exists($arrayUri[0], $config['cs_languages'])) {
+        $config['cs_language'] = $config['cs_languages'][$arrayUri[0]];
+        $config['cs_lang'] = $arrayUri[0];
+    }
+} else {
+    // Here change default Language
+    $config['cs_language'] = 'spanish';
+    $config['cs_lang'] = 'es';
+}
