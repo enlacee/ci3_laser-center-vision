@@ -12,6 +12,11 @@ class Post_model  extends CI_Model {
     const TIPO_POST = 'post';
     const TIPO_PAGE = 'page';
 
+    const CATEGORY_CIRUGIA = 'cirugia';
+    const CATEGORY_TECNOLOGIA = 'tecnologia';
+    const CATEGORY_EXAMENES = 'examenes';
+    const CATEGORY_MAIN_MENU = 'main-menu';
+
     const STATUS_TRUE = 1;
     const STATUS_FALSE = 0;
 
@@ -65,6 +70,28 @@ class Post_model  extends CI_Model {
                $rs = $query->result_array();
             }
             // -------- end
+            $this->cache->file->save($keyCache, $rs, MY_Controller::CACHE_TIME);
+        }
+
+        return $rs;
+    }
+
+
+    public function getByTitle($title, $nameWhere)
+    {
+        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $title;
+
+        if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
+            $this->db->select()->from($this->_name);
+            $this->db->like($nameWhere, $title);
+            $this->db->where('category', Post_model::CATEGORY_MAIN_MENU);
+            $this->db->where('post_type', Post_model::TIPO_POST);
+            $this->db->where('status', Post_model::STATUS_TRUE);
+            $this->db->limit(1);
+
+            $query = $this->db->get();
+            $response = $query->result_array();
+            $rs = ($response == false) ? null : $response[0];
             $this->cache->file->save($keyCache, $rs, MY_Controller::CACHE_TIME);
         }
 

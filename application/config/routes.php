@@ -58,6 +58,7 @@ $route['translate_uri_dashes'] = FALSE;
  */
 //Section example
 $route['seccion'] = 'frontend/section_ejemplo';
+$route['serializar'] = 'post/serializar';
 
 /**
  * Backend routes

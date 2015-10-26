@@ -76,12 +76,28 @@ class Layout
 	{
 		$layout	= $this->layout;
         $load_view = array();
-        $load_view['content_for_layout'] = $this->CI->load->view($view, $data, true);   
+        $load_view['content_for_layout'] = $this->CI->load->view($view, $data, true);
+		$this->_formatTitle();
+
 		if ( $return )
 			return $this->CI->load->view($layout, $load_view, true);
 		else
 			$this->CI->load->view($layout, $load_view, false);
 	}
+
+    /**
+     * Titulo de la pagina para las vistas configuradas
+     * @return Array
+     */
+    private function _formatTitle()
+    {        
+        $pageTitle = (defined('TITLE')) ? TITLE : 'Defautl';
+        if (isset($this->title)) {
+            $this->title = $this->title . ' | '. $pageTitle;
+        } else {
+            $this->title = 'default' . ' | '. $pageTitle; 
+        }
+    }
 
 	/**
 	 * Retorna o renderiza un elemento

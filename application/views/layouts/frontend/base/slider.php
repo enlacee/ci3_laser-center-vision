@@ -16,7 +16,7 @@
 			  	<?php for($i=1; $i<=5; $i++): ?>
 			    <div class="item">
 			      <a href="#">
-			      	<img src="assets/images/slider/<?php echo $i; ?>.jpg">
+			      	<img src="<?php echo base_url() ?>assets/images/slider/<?php echo $i; ?>.jpg">
 			      </a>
 			    </div>
 			  	<?php endfor; ?>

@@ -6,24 +6,24 @@
     <div class="box">
       <div class="marcasTrabajamos text-center mgTop10">
 
-        <h4 class="barra text-center">Aseguradoras asociadas</h4>
+        <h4 class="barra text-center"><?php echo lang('msg_associated_insurance') ?></h4>
         
 				<div class="row">
 	        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 item1">
 	          <a href="http://www.ecuasanitas.info/newecua.php?c=43" target="_blank">
-	            <img src="assets/images/logos/ecuasanitas.jpg" width="270" height="80" class="img-responsive mgAuto" alt="Ecuasanitas">
+	            <img src="<?php echo base_url() ?>assets/images/logos/ecuasanitas.jpg" width="270" height="80" class="img-responsive mgAuto" alt="Ecuasanitas">
 	          </a>
 	        </div>
 
 	        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 item2">
 	          <a href="http://www.segurosinteroceanica.com/" target="_blank">
-	            <img src="assets/images/logos/interoceanicas.jpg" width="270" height="80" class="img-responsive mgAuto" alt="Interoceanicas">
+	            <img src="<?php echo base_url() ?>assets/images/logos/interoceanicas.jpg" width="270" height="80" class="img-responsive mgAuto" alt="Interoceanicas">
 	          </a>
 	        </div>
 
 	        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 item3">
 	          <a href="http://www.confiamed.com/" target="_blank">
-	            <img src="assets/images/logos/confiamed.jpg" width="270" height="80" class="img-responsive mgAuto" alt="Confiamed">
+	            <img src="<?php echo base_url() ?>assets/images/logos/confiamed.jpg" width="270" height="80" class="img-responsive mgAuto" alt="Confiamed">
 	          </a>
 	        </div>
 
@@ -32,7 +32,7 @@
 	            <a href="http://www.issfa.mil.ec/" target="_blank" class="col-xs-6"></a>
 	            <a href="http://www.isspol.gob.ec/" target="_blank" class="col-xs-6"></a>
 	          </div>
-	          <img src="assets/images/logos/varios.jpg" width="270" height="80" class="img-responsive mgAuto" alt="">   
+	          <img src="<?php echo base_url() ?>assets/images/logos/varios.jpg" width="270" height="80" class="img-responsive mgAuto" alt="">   
 	        </div>
         </div>
 

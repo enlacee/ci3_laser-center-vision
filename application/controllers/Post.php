@@ -6,34 +6,55 @@ class Post extends Public_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		$this->layout->setLayout('layouts/frontend/base');
+		$this->load->model('Post_model');
 	}
 
 	public function index()
 	{
-		//Layout options
-		$this->layout->setTitle("Section ejemplo");
-		$this->layout->setKeywords("keywords");
-		$this->layout->setDescripcion("Descripción");
-		$this->layout->setSocialSiteName("Name");
-		$this->layout->setSocialTitle("Title");
-		$this->layout->setSocialResumen("Resumen");
-		$this->layout->setSocialDescripcion("Description");
-		$this->layout->css(array(
-			'/assets/css/additional.css',
-			'/assets/css/additional.css'
-		));
-		$this->layout->js(array(
-			'/assets/js/additional.js,
-			/assets/js/additional.js'
-		));
+		$rsFormat = array();
+		$page = $this->uri->segment(1);
+		$subPage = $this->uri->segment(2);
 
-		//var_dump($this->config->item('cs_language')); exit;
+		$title = str_replace('-', ' ', $subPage);
+		$nameWhere = getIdLangString('title');
+		$result = $this->Post_model->getByTitle($title, $nameWhere);
 
+		if (is_array($result) && count($result) > 0) {
+			$keyname = getIdLangString('content');
 
+			$rsFormat = array(
+				'title' => $result[$nameWhere],
+				'content' => $result[$keyname]
+			); 
+			
+			$this->layout->setTitle($rsFormat['title']);
+			$this->layout->setKeywords("keywords");
+			$this->layout->setDescripcion("Descripción");
+			$this->layout->setSocialSiteName("Name");
+			$this->layout->setSocialTitle("Title");
+			$this->layout->setSocialResumen("Resumen");
+			$this->layout->setSocialDescripcion("Description");
+			
+		}
 
 		//Layout load view
-		$this->layout->view('frontend/register/register_form');
+		$this->layout->view('frontend/post/index', $rsFormat);
 	}
 
+	public function serializar()
+	{
+		$this->layout->view('frontend/post/serializar');
+
+		if ($this->input->post()) {
+			$this->input->post('content');
+			$a = array(
+				'title' => $this->input->post('title'),
+				'content' => $this->input->post('content')
+			);
+			echo serialize($a);
+			exit;
+		}
+	}
 
 }

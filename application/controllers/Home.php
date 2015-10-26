@@ -23,7 +23,7 @@ class Home extends Public_Controller {
 
 
 		//$this->lang->load("message","spanish");
-		echo $this->lang->line("msg_hello"); exit;
+		//echo $this->lang->line("msg_hello"); exit;
 		//var_dump($this->config->item('language'));
 
 		//echo URLify::filter (' J\'étudie le français ');exit;

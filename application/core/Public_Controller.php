@@ -42,9 +42,40 @@ class Public_Controller extends MY_Controller
         //load pages (about us)
         $this->load->model('Post_model');
         $pagesMenu = array();
-        $pagesMenu['pagesMenu'] = $this->Post_model->getAll(Post_model::TIPO_POST,'main-menu',Post_model::STATUS_TRUE, 'asc', 8);
+        $pagesMenu['pagesMenu'] = $this->Post_model->getAll(Post_model::TIPO_POST,Post_model::CATEGORY_MAIN_MENU,Post_model::STATUS_TRUE, 'asc', 8);
         $this->load->vars($pagesMenu);
-        //var_dump($pagesMenu['pagesMenu']);exit;
+
+        $this->load->vars(array(
+            'pagesCirugia' => $this->Post_model->getAll(
+                Post_model::TIPO_POST,
+                Post_model::CATEGORY_CIRUGIA,
+                Post_model::STATUS_TRUE,
+                'asc',
+                9
+            )
+        ));
+
+        $this->load->vars(array(
+            'pagesTecnologia' => $this->Post_model->getAll(
+                Post_model::TIPO_POST,
+                Post_model::CATEGORY_TECNOLOGIA,
+                Post_model::STATUS_TRUE,
+                'asc',
+                4
+            )
+        ));
+
+        $this->load->vars(array(
+            'pagesExamenes' => $this->Post_model->getAll(
+                Post_model::TIPO_POST,
+                Post_model::CATEGORY_EXAMENES,
+                Post_model::STATUS_TRUE,
+                'asc',
+                9
+            )
+        ));
+
+
     }
 
 }

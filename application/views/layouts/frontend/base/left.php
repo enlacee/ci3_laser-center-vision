@@ -6,46 +6,76 @@
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-check-square-o"></i><?php echo strtoupper(lang('msg_cirugia')) ?></h3>
+
+				<?php
+					$pages = $this->load->get_var('pagesCirugia');
+					if(!empty($pages) && count($pages) > 0) :
+				?>
 				<ul>
-					<li><a href="#">Miopía - Astigmatismo</a></li>
-					<li><a href="#">Hipermetropía - Presbicia</a></li>)
-					<li><a href="#">Catarata</a></li>
-					<li><a href="#">Queratocono</a></li>
-					<li><a href="#">Glaucoma</a></li>
-					<li><a href="#">Estrabismo</a></li>
-					<li><a href="#">Pterigium</a></li>
-					<li><a href="#">Trasplante De Cornea</a></li>
-					<li><a href="#">Cirugía Plastica Ocular</a></li>
+					<?php foreach($pages as $key => $value) : ?>
+					<?php
+						$keyName = getIdLangString('title');
+						$urlFriendly = URLify::filter($value[$keyName])
+					?>
+						<li><a href="<?php echo base_url_lang($urlFriendly) ?>"><?php echo $value[$keyName] ?></a></li>
+					<?php endforeach; ?>
 				</ul>
+				<?php else : ?>
+					<ul>
+						<li><a href="#">No found records.</a></li>
+					</ul>
+				<?php endif; ?>
+
 			</div>
 			<!--/ box -->
 
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-globe"></i><?php echo strtoupper(lang('msg_thecnologie')) ?></h3>
+
+				<?php
+					$pages = $this->load->get_var('pagesTecnologia');
+					if(!empty($pages) && count($pages) > 0) :
+				?>
 				<ul>
-					<li><a href="#">Excimer Laser</a></li>
-					<li><a href="#">Faco - Infiniti</a></li>
-					<li><a href="#">Crosslinking Corneal</a></li>
-					<li><a href="#">Láser Argón</a></li>
+					<?php foreach($pages as $key => $value) : ?>
+					<?php
+						$keyName = getIdLangString('title');
+						$urlFriendly = URLify::filter($value[$keyName])
+					?>
+						<li><a href="<?php echo base_url_lang($urlFriendly) ?>"><?php echo $value[$keyName] ?></a></li>
+					<?php endforeach; ?>
 				</ul>
+				<?php else : ?>
+					<ul>
+						<li><a href="#">No found records.</a></li>
+					</ul>
+				<?php endif; ?>
+
 			</div>
 			<!--/ box -->
 
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-leaf"></i><?php echo strtoupper(lang('msg_quizs')) ?></h3>
+				<?php
+					$pages = $this->load->get_var('pagesExamenes');
+					if(!empty($pages) && count($pages) > 0) :
+				?>
 				<ul>
-					<li><a href="#">Pentacam</a></li>
-					<li><a href="#">Topografía/Keratograph</a></li>
-					<li><a href="#">Campimetría</a></li>
-					<li><a href="#">OCT Seg. Anterior y Posterior</a></li>
-					<li><a href="#">Microscopía Especular</a></li>
-					<li><a href="#">Ultrasonido Ocular</a></li>
-					<li><a href="#">Ecobiometría</a></li>
-					<li><a href="#">Ortoqueratología</a></li>
-					<li><a href="#">Contactología</a></li>
+					<?php foreach($pages as $key => $value) : ?>
+					<?php
+						$keyName = getIdLangString('title');
+						$urlFriendly = URLify::filter($value[$keyName])
+					?>
+						<li><a href="<?php echo base_url_lang($urlFriendly) ?>"><?php echo $value[$keyName] ?></a></li>
+					<?php endforeach; ?>
 				</ul>
+				<?php else : ?>
+					<ul>
+						<li><a href="#">No found records.</a></li>
+					</ul>
+				<?php endif; ?>
 			</div>
 			<!--/ box -->
 
@@ -53,13 +83,13 @@
 			<div class="box">
 				<h3><i class="fa fa-share-alt"></i><?php echo strtoupper(lang('msg_follow_us')) ?></h3>
 				<a href="#" target="_blank">
-					<img src="assets/images/logos/facebook.jpg" alt="Siguenos en Facebook">
+					<img src="<?php echo base_url() ?>assets/images/logos/facebook.jpg" alt="Siguenos en Facebook">
 				</a>
 				<a href="#" target="_blank">
-					<img src="assets/images/logos/youtube.jpg" alt="Siguenos en Youtube">
+					<img src="<?php echo base_url() ?>assets/images/logos/youtube.jpg" alt="Siguenos en Youtube">
 				</a>
 				<a href="#" target="_blank">
-					<img src="assets/images/logos/twitter.jpg" alt="Siguenos en Twitter">
+					<img src="<?php echo base_url() ?>assets/images/logos/twitter.jpg" alt="Siguenos en Twitter">
 				</a>
 			</div>
 			<!--/ box -->
@@ -67,7 +97,7 @@
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-check-square-o"></i><?php echo strtoupper(lang('msg_cirugias')) ?></h3>
-				<p>Cirugías realizadas este año en la clínica.</p>
+				<p><?php echo lang('msg_cirugias_text') ?></p>
 				<div class="panel panel-default">
 					<table class="table table-hover table-bordered table-condensed table-striped">
 						<tbody>

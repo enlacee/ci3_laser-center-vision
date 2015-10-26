@@ -6,14 +6,14 @@
 		<!-- Box -->
 		<div class="box">
 			<h1>LA MEJOR SOLUCIÓN A SUS PROBLEMAS VISUALES</h1>
-			<img src="assets/images/sections/imagen_news_1.jpg" class="img-responsive mgAuto">
+			<img src="<?php echo base_url() ?>assets/images/sections/imagen_news_1.jpg" class="img-responsive mgAuto">
 			<p>Laser Center Visión 20/20 es el Centro Oftalmológico pionero en el país, el cual cuenta con un equipo médico de profesionales altamente capacitados alrededor del mundo y poseedores de tecnología de punta con equipos únicos y modernos.</p>
 		</div>
 		<!--/ Box -->
 
 		<!-- Box -->
 		<div class="box">
-			<img src="assets/images/sections/equipo.jpg" class="img-responsive mgAuto">
+			<img src="<?php echo base_url() ?>assets/images/sections/equipo.jpg" class="img-responsive mgAuto">
 			<p>Además de la mejor tecnología del Ecuador y del mundo, contamos con un cuerpo médico de especialistas en oftalmología, con mas de 30 años de experiencia, especializados y con cursos constantes de actualización en los mejores institutos oftalmológicos del mundo como Israel, Estados Unidos, Brasil, Colombia y Europa.</p>
 		</div>
 		<!--/ Box -->

@@ -5,7 +5,7 @@
 		<!-- Box -->
 		<div class="box">
 			<div class="alert alert-info">
-				<p>Premiados como el mejor Trabajo de Investigación promoviendo la calidad de vida, al Dr Byron Sancho y a la mejor empresa preocupada por la calidad de vida en Latinoamérica por parte de la Organización Internacional para la Capacitación e Investigación Médica</p>
+				<p><?php echo lang('msg_nota_azul_1') ?></p>
 			</div>
 		</div>
 		<!--/ Box -->
@@ -13,8 +13,8 @@
 		<!-- Box -->
 		<div class="box">
 			<div class="alert alert-info">
-				<strong class="text1">EXCIMER LASER</strong>
-				<p>Contamos con el mejor Excimer Laser del país y del Mundo, Allegretto Wave Eye Q, que brinda los parámetros más precisos y óptimos de recuperación visual.</p>
+				<strong class="text1"><?php echo lang('msg_nota_azul_2_title') ?></strong>
+				<p><?php echo lang('msg_nota_azul_2') ?></p>
 			</div>
 		</div>
 		<!--/ Box -->
@@ -22,8 +22,8 @@
 		<!-- Box -->
 		<div class="box">
 			<div class="alert alert-info">
-				<strong class="text1">CROSS LINKING</strong>
-				<p>Técnica utilizada para detener el desarrollo del Queratocono, que es el adelgazamiento progresivo de la cornea que se presenta a cualquier edad, disminuyendo su capacidad visual.</p>
+				<strong class="text1"><?php echo lang('msg_nota_azul_3_title') ?></strong>
+				<p><?php echo lang('msg_nota_azul_3') ?></p>
 			</div>
 		</div>
 		<!--/ Box -->
@@ -31,8 +31,8 @@
 		<!-- Box -->
 		<div class="box">
 			<div class="alert alert-info">
-				<strong class="text1">CATARATA</strong>
-				<p>Utilización de técnica de facoemulsificación a través de ultrasonido para desmenuzar la catarata en pedazos minúsculos, los cuales son aspirados con una pequeña incisión..</p>
+				<strong class="text1"><?php echo lang('msg_nota_azul_4_title') ?></strong>
+				<p><?php echo lang('msg_nota_azul_4') ?></p>
 			</div>
 		</div>
 		<!--/ Box -->
