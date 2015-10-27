@@ -5,10 +5,8 @@
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-check-square-o"></i><?php echo strtoupper(lang('msg_cirugia')) ?></h3>
-				<?php
-					$pages = $this->load->get_var('pagesCirugia');
-					if(!empty($pages) && count($pages) > 0) :
-				?>
+				<?php $pages = $this->load->get_var('pagesCirugia'); ?>
+				<?php if(!empty($pages) && count($pages) > 0) : ?>
 				<ul>
 					<?php foreach($pages as $key => $value) : ?>
 						<li><a href="<?php echo base_url_lang(url_title_beauty($value['title_seo'])) ?>"><?php echo $value['title'] ?></a></li>
@@ -23,10 +21,8 @@
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-globe"></i><?php echo strtoupper(lang('msg_thecnologie')) ?></h3>
-				<?php
-					$pages = $this->load->get_var('pagesTecnologia');
-					if(!empty($pages) && count($pages) > 0) :
-				?>
+				<?php $pages = $this->load->get_var('pagesTecnologia'); ?>
+				<?php if(!empty($pages) && count($pages) > 0) : ?>
 				<ul>
 					<?php foreach($pages as $key => $value) : ?>
 						<li><a href="<?php echo base_url_lang(url_title_beauty($value['title_seo'])) ?>"><?php echo $value['title'] ?></a></li>
@@ -41,10 +37,8 @@
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-leaf"></i><?php echo strtoupper(lang('msg_quizs')) ?></h3>
-				<?php
-					$pages = $this->load->get_var('pagesExamenes');
-					if(!empty($pages) && count($pages) > 0) :
-				?>
+				<?php $pages = $this->load->get_var('pagesExamenes') ?>
+				<?php if(!empty($pages) && count($pages) > 0) : ?>
 				<ul>
 					<?php foreach($pages as $key => $value) : ?>
 						<li><a href="<?php echo base_url_lang(url_title_beauty($value['title_seo'])) ?>"><?php echo $value['title'] ?></a></li>
@@ -76,16 +70,25 @@
 				<h3><i class="fa fa-check-square-o"></i><?php echo strtoupper(lang('msg_cirugias')) ?></h3>
 				<p><?php echo lang('msg_cirugias_text') ?></p>
 				<div class="panel panel-default">
-					<table class="table table-hover table-bordered table-condensed table-striped">
-						<tbody>
-							<?php for( $i=1; $i<=18; $i++ ): ?>
-							<tr>
-								<td><?php echo strtoupper(lang('msg_cirugia')) ?></td>
-								<td><?php echo $i; ?></td>
-							</tr>
-						<?php endfor; ?>
-						</tbody>
-					</table>
+					<?php $pages = $this->load->get_var('surgerie') ?>
+					<?php if(!empty($pages) && count($pages) > 0) : ?>
+						<?php $total = 0; ?>
+						<table class="table table-hover table-bordered table-condensed table-striped">
+							<tbody>
+								<?php foreach ($pages as $key => $value) : ?>
+									<tr>
+										<td><?php echo strtoupper($value['name']) ?></td>
+										<td><?php echo $value['cant']; ?></td>
+									</tr>
+									<?php $total = $total + ((int) $value['cant']) ?>
+								<?php endforeach; ?>
+								<tr>
+									<td><?php echo lang('msg_total_de_cirugias')?></td>
+									<td>+<?php echo $total; ?></td>
+								</tr>
+							</tbody>
+						</table>
+					<?php endif; ?>
 				</div>
 			</div>
 			<!--/ box -->
@@ -93,4 +96,3 @@
 		</div>
 	</div>
 </div>
-<!--/ Col 1 -->

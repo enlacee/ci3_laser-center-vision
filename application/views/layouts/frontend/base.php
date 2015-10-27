@@ -89,7 +89,7 @@
 
 
 	<!-- Footer -->
-	<?php $this->load->view("layouts/frontend/base/footer.php"); ?>
+	<?php  $this->load->view("layouts/frontend/base/footer.php"); ?>
 	<!--/ Footer -->
 
 

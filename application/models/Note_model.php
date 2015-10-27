@@ -5,13 +5,9 @@
  *
  * @author anb
  */
-class Banner_model  extends CI_Model {
+class Note_model  extends CI_Model {
 
-    protected $_table = 'ac_banners';
-    protected $_table_languages = 'ac_languages';
-
-    const CATEGORY_BANNER = 'banner';
-    const CATEGORY_SLIDER = 'slider';
+    protected $_table = 'ac_block_right';
 
     const STATUS_TRUE = 1;
     const STATUS_FALSE = 0;
@@ -20,21 +16,17 @@ class Banner_model  extends CI_Model {
      * list of post (lastest news)
      */
     public function getAll(
-        $category = '',
-        $status = Banner_model::STATUS_TRUE,
+        $status = Note_model::STATUS_TRUE,
         $order = 'desc',
         $limit = 10,
         $offset = '',
         $rows = false
     ) {
         $strRows = (int) $rows;
-        $keyCache = __CLASS__ . __FUNCTION__ .'_'.$category.'_'.$status.'_'.$strRows.'_'.$order.$limit.'_'.$offset;
+        $keyCache = __CLASS__ . __FUNCTION__ . $status.'_'.$strRows.'_'.$order.$limit.'_'.$offset;
 
         if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
             $this->db->select()->from($this->_table);
-            if(!empty($category)) {
-                $this->db->where('category', $category);
-            }
             if(!empty($status)) {
                 $this->db->where('status', $status);
             }

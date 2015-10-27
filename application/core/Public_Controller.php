@@ -43,6 +43,8 @@ class Public_Controller extends MY_Controller
         //load pages (about us)
         $this->load->model('Post_model');
         $this->load->model('Banner_model');
+        $this->load->model('Surgerie_model');
+        $this->load->model('Note_model');
         $pagesMenu = array();
         $pagesMenu['pagesMenu'] = $this->Post_model->getAll(Post_model::TIPO_POST,Post_model::CATEGORY_MAIN_MENU,Post_model::STATUS_TRUE, 'asc', 8);
         $this->load->vars($pagesMenu);
@@ -95,6 +97,21 @@ class Public_Controller extends MY_Controller
             )
         ));
 
-    }
+        $this->load->vars(array(
+            'surgerie' => $this->Surgerie_model->getAll(
+                Surgerie_model::STATUS_TRUE,
+                'desc',
+                25
+            )
+        ));
 
+        $this->load->vars(array(
+            'note' => $this->Note_model->getAll(
+                Note_model::STATUS_TRUE,
+                'asc',
+                4
+            )
+        ));
+
+    }
 }
