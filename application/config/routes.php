@@ -86,5 +86,5 @@ $route['admin/editar'] = 'backend/edit';
 $route['^(\w{2})/(.*)$'] = '$2';
 $route['^(\w{2})$'] = $route['default_controller'];
 */
+$route['^(\w{2})'] = "home/index";
 $route['^(\w{2})/(.*)'] = "post/index";
-$route['^(.*)'] = "post";

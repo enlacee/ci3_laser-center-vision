@@ -18,3 +18,26 @@ $lang["msg_associated_insurance"] = "Aseguradoras asociadas";
 $lang["msg_thecnologie"] = "Tecnología";
 $lang["msg_quizs"] = "Exámenes";
 $lang["msg_follow_us"] = "Siguenos";
+
+$lang["msg_name_complete"] = "Nombres y Apellidos";
+$lang["msg_set_name_complete"] = "Coloque sus nombres";
+$lang["msg_age"] = "Edad";
+$lang["msg_set_age"] = "Coloque su edad";
+$lang["msg_address"] = "Dirección";
+$lang["msg_set_address"] = "Coloque su dirección";
+$lang["msg_city"] = "Ciudad";
+$lang["msg_telephone_contact"] = "Teléfono de contacto";
+$lang["msg_set_telephone_contact"] = "Coloque su número de teléfono";
+$lang["msg_cell_phone"] = "Teléfono Celular";
+$lang["msg_set_cell_phone"] = "Coloque su número de celular";
+$lang["msg_email"] = "Email/Correo";
+$lang["msg_set_email"] = "Coloque su email o correo";
+$lang["msg_visual_problem"] = "Problema Visual";
+$lang["msg_select"] = "Seleccione";
+$lang["msg_message"] = "Mensaje";
+$lang["msg_set_message"] = "Coloque su mensaje";
+$lang["msg_send_consult"] = "Enviar Consulta";
+//html
+$lang["msg_send_box_address"] = "
+Av. 6 de Diciembre N-3402 entre Eloy Alfaro y Checoslovaquia, una cuadra al norte del Consejo Nacional Electoral
+Consultas previa cita a los teléfonos";

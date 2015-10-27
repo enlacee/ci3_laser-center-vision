@@ -26,11 +26,10 @@ class Home extends Public_Controller {
 		//echo $this->lang->line("msg_hello"); exit;
 		//var_dump($this->config->item('language'));
 
-		//echo URLify::filter (' J\'étudie le français ');exit;
-
 		$params = array(
-			'data' => $this->getPostByCategory('')
+			'data' => $this->Post_model->getHome()
 		);
+		
 		//Layout load view
 		$this->layout->view('frontend/home/index', $params);
 	}

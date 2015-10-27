@@ -23,7 +23,8 @@ class Note_model  extends CI_Model {
         $rows = false
     ) {
         $strRows = (int) $rows;
-        $keyCache = __CLASS__ . __FUNCTION__ . $status.'_'.$strRows.'_'.$order.$limit.'_'.$offset;
+        $keyCache = __CLASS__ . __FUNCTION__ . $status.'_'.$strRows.'_'
+        . $order. '_' . $limit.'_'.$offset.'_'.$this->id_lang;;
 
         if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
             $this->db->select()->from($this->_table);

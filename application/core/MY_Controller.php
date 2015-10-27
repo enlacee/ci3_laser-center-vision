@@ -5,6 +5,8 @@ class MY_Controller extends CI_Controller
 {
     public $data = array();
     public $id_lang = '';
+    public $cache_status = false;
+
     const CACHE_TIME = 600;
 
     public function __construct ()
@@ -14,6 +16,7 @@ class MY_Controller extends CI_Controller
         //$this->load->driver('cache');
         ENVIRONMENT != 'development' || $this->output->enable_profiler(TRUE);
         $this->id_lang = $this->getIdLanguage();
+        $this->cache_status = (ENVIRONMENT == 'development') ? false : true;
     }
 
     /**

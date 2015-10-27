@@ -36,7 +36,7 @@ class Post_model  extends CI_Model {
     ) {
         $str_post_type = str_replace('-', '_', $post_type);
         $strRows = (int) $rows;
-        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $str_post_type.$category.'_'.$status.'_'.$strRows.'_'.$order.$limit.'_'.$offset;
+        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $str_post_type.$category.'_'.$status.'_'.$strRows.'_'.$order.$limit.'_'.$offset.'_'.$this->id_lang;
 
         if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
             $this->db->select()->from($this->_name);
@@ -76,13 +76,38 @@ class Post_model  extends CI_Model {
 
     public function getByTitle($title)
     {
-        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $title;
+        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $title.'_'.$this->id_lang;;
         if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
             $this->db->select()->from($this->_name);
-            $this->db->join($this->_table_languages, "{$this->_table_languages}.id = {$this->id_lang}");
             $this->db->like('title_seo', $title);
+            $this->db->where('id_language', $this->id_lang);
             $this->db->where('post_type', Post_model::TIPO_POST);
             $this->db->where('status', Post_model::STATUS_TRUE);
+            $this->db->limit(1);
+
+            $query = $this->db->get();
+            $response = $query->result_array();
+            $rs = ($response == false) ? null : $response[0];
+            $this->cache->file->save($keyCache, $rs, MY_Controller::CACHE_TIME);
+        }
+
+        return $rs;
+    }
+    /**
+    * get home by language
+    */
+    public function getHome()
+    {
+        $keyCache = __CLASS__ . __FUNCTION__ . '_' . 'home'.'_'.$this->id_lang;;
+        $rs = $this->cache->file->get($keyCache);
+
+        if (true/*$rs == false*/) {
+            $this->db->select()->from($this->_name);
+            $this->db->where('id_language', $this->id_lang);
+            $this->db->where('post_type', Post_model::TIPO_POST);
+            $this->db->where('status', Post_model::STATUS_TRUE);
+            $this->db->where('is_home', 1);
+            $this->db->order_by('id', 'asc');
             $this->db->limit(1);
 
             $query = $this->db->get();
