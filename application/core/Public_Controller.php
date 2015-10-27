@@ -11,6 +11,7 @@ class Public_Controller extends MY_Controller
         $this->lang->load("message", $this->config->item('cs_language'));
 
         // helpers
+        $this->load->helper('text');
         $this->load->helper(array(
             'my_ayuda_helper'
         ));

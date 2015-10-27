@@ -6,18 +6,16 @@
 				<i class="fa fa-times-circle"></i>
 			</li>
 
-			<?php $pagesMenu = $this->load->get_var('pagesMenu'); if(!empty($pagesMenu) && count($pagesMenu) > 0) : ?>
+			<?php $pages = $this->load->get_var('pagesMenu'); if(!empty($pages) && count($pages) > 0) : ?>
 			<?php $classMenu = array('m_home','m_clinica','m_servicios','m_preguntas','m_videos','m_ubicacion','m_cita','m_contacto'); ?>
-				<?php foreach ($pagesMenu as $key => $value) : ?>
+				<?php foreach ($pages as $key => $value) : ?>
 					<?php if ($key >= 0) : ?>
 						<?php
 						$activeClass = '';
 						$stringClass = '' . $classMenu[$key] . ' ' . $activeClass ;
-						$keyNameTitle = getIdLangString('title');
-						$urlFriendly = URLify::filter($value[$keyNameTitle])
 						?>
-						<li><a class="<?php echo $stringClass ?>" href="<?php echo base_url_lang($urlFriendly) ?>"><?php echo $value[$keyNameTitle] ?></a></li>
-					<?php endif; ?>					
+						<li><a class="<?php echo $stringClass ?>" href="<?php echo base_url_lang(url_title_beauty($value['title_seo'])) ?>"><?php echo $value['title'] ?></a></li>
+					<?php endif; ?>
 				<?php endforeach; ?>
 			<?php else: ?>
 				<li><a href="#">no found data</a></li>

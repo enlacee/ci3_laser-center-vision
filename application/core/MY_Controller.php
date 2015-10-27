@@ -4,18 +4,34 @@ if (! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Controller extends CI_Controller
 {
     public $data = array();
+    public $id_lang = '';
     const CACHE_TIME = 600;
 
-
-
-
-    function __construct ()
+    public function __construct ()
     {
         parent::__construct();
         //$this->load->library(array('layout', 'breadcrumbs', 'database'));
         //$this->load->driver('cache');
         ENVIRONMENT != 'development' || $this->output->enable_profiler(TRUE);
-        //$this->data['user'] = 'Joost';
+        $this->id_lang = $this->getIdLanguage();
+    }
+
+    /**
+    * Return Id languague
+    * value is an array() config_site.php and  make reference to the table 'ac_languages'
+    */
+    public function getIdLanguage()
+    {
+        $curLanguage = $this->config->item('cs_language');
+        $languagues = $this->config->item('cs_languages');
+        $array = array_values($languagues);
+        $key = array_search($curLanguage, $array);
+        $id = 1;
+        if ($key  > 0) {
+            $id = (int) $key + 1;
+        }
+
+        return $id;
     }
 
     /**

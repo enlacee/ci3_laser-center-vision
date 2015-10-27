@@ -2,56 +2,39 @@
 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col col_1 left-column sm568Max_width_100">
 	<div class="ctn">
 		<div class="main_left">
-
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-check-square-o"></i><?php echo strtoupper(lang('msg_cirugia')) ?></h3>
-
 				<?php
 					$pages = $this->load->get_var('pagesCirugia');
 					if(!empty($pages) && count($pages) > 0) :
 				?>
 				<ul>
 					<?php foreach($pages as $key => $value) : ?>
-					<?php
-						$keyName = getIdLangString('title');
-						$urlFriendly = URLify::filter($value[$keyName])
-					?>
-						<li><a href="<?php echo base_url_lang($urlFriendly) ?>"><?php echo $value[$keyName] ?></a></li>
+						<li><a href="<?php echo base_url_lang(url_title_beauty($value['title_seo'])) ?>"><?php echo $value['title'] ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 				<?php else : ?>
-					<ul>
-						<li><a href="#">No found records.</a></li>
-					</ul>
+					<ul><li><a href="#">No found records.</a></li></ul>
 				<?php endif; ?>
-
 			</div>
 			<!--/ box -->
 
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-globe"></i><?php echo strtoupper(lang('msg_thecnologie')) ?></h3>
-
 				<?php
 					$pages = $this->load->get_var('pagesTecnologia');
 					if(!empty($pages) && count($pages) > 0) :
 				?>
 				<ul>
 					<?php foreach($pages as $key => $value) : ?>
-					<?php
-						$keyName = getIdLangString('title');
-						$urlFriendly = URLify::filter($value[$keyName])
-					?>
-						<li><a href="<?php echo base_url_lang($urlFriendly) ?>"><?php echo $value[$keyName] ?></a></li>
+						<li><a href="<?php echo base_url_lang(url_title_beauty($value['title_seo'])) ?>"><?php echo $value['title'] ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 				<?php else : ?>
-					<ul>
-						<li><a href="#">No found records.</a></li>
-					</ul>
+					<ul><li><a href="#">No found records.</a></li></ul>
 				<?php endif; ?>
-
 			</div>
 			<!--/ box -->
 
@@ -64,17 +47,11 @@
 				?>
 				<ul>
 					<?php foreach($pages as $key => $value) : ?>
-					<?php
-						$keyName = getIdLangString('title');
-						$urlFriendly = URLify::filter($value[$keyName])
-					?>
-						<li><a href="<?php echo base_url_lang($urlFriendly) ?>"><?php echo $value[$keyName] ?></a></li>
+						<li><a href="<?php echo base_url_lang(url_title_beauty($value['title_seo'])) ?>"><?php echo $value['title'] ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 				<?php else : ?>
-					<ul>
-						<li><a href="#">No found records.</a></li>
-					</ul>
+					<ul><li><a href="#">No found records.</a></li></ul>
 				<?php endif; ?>
 			</div>
 			<!--/ box -->

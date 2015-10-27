@@ -8,6 +8,7 @@
 class Post_model  extends CI_Model {
 
     protected $_name = 'ac_posts';
+    protected $_table_languages = 'ac_languages';
 
     const TIPO_POST = 'post';
     const TIPO_PAGE = 'page';
@@ -37,7 +38,6 @@ class Post_model  extends CI_Model {
         $offset = '',
         $rows = false
     ) {
-
         $str_post_type = str_replace('-', '_', $post_type);
         $strRows = (int) $rows;
         $keyCache = __CLASS__ . __FUNCTION__ .'_'. $str_post_type.$category.'_'.$status.'_'.$strRows.'_'.$order.$limit.'_'.$offset;
@@ -51,6 +51,7 @@ class Post_model  extends CI_Model {
             if(!empty($status)) {
                 $this->db->where('status', $status);
             }
+            $this->db->join($this->_table_languages, "{$this->_table_languages}.id = {$this->id_lang}");
 
             // -------- init
             if (!empty($limit) && !empty ($offset)) {
@@ -77,14 +78,13 @@ class Post_model  extends CI_Model {
     }
 
 
-    public function getByTitle($title, $nameWhere)
+    public function getByTitle($title)
     {
         $keyCache = __CLASS__ . __FUNCTION__ .'_'. $title;
-
         if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
             $this->db->select()->from($this->_name);
-            $this->db->like($nameWhere, $title);
-            $this->db->where('category', Post_model::CATEGORY_MAIN_MENU);
+            $this->db->join($this->_table_languages, "{$this->_table_languages}.id = {$this->id_lang}");
+            $this->db->like('title_seo', $title);
             $this->db->where('post_type', Post_model::TIPO_POST);
             $this->db->where('status', Post_model::STATUS_TRUE);
             $this->db->limit(1);
@@ -97,8 +97,6 @@ class Post_model  extends CI_Model {
 
         return $rs;
     }
-
-
 
     /**
      *
@@ -124,9 +122,6 @@ class Post_model  extends CI_Model {
         }
         return $rs;
     }
-
-
-
 
     /**
      *
