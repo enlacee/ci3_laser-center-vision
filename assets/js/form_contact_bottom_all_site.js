@@ -10,7 +10,7 @@ $(document).ready(function() {
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
-        fields: {/*
+        fields: {
            nombres: {
                 validators: {
                     notEmpty: {
@@ -73,7 +73,7 @@ $(document).ready(function() {
                         message: ''
                     }
                 }
-            }*/
+            }
         }
     })
     .on('err.field.fv', function(e, data) {
@@ -104,7 +104,7 @@ $(document).ready(function() {
             cache: false,
             type: "POST",
             dataType: "json",
-            url: "home/send_form_contact_all_site",
+            url: "/home/send_form_contact_all_site",
             data: form_serialize + "&id=" + Math.random(),
             success: function (response) {
 

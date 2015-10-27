@@ -29,7 +29,7 @@ class Home extends Public_Controller {
 		$params = array(
 			'data' => $this->Post_model->getHome()
 		);
-		
+
 		//Layout load view
 		$this->layout->view('frontend/home/index', $params);
 	}
