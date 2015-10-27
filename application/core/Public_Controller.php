@@ -42,6 +42,7 @@ class Public_Controller extends MY_Controller
     {
         //load pages (about us)
         $this->load->model('Post_model');
+        $this->load->model('Banner_model');
         $pagesMenu = array();
         $pagesMenu['pagesMenu'] = $this->Post_model->getAll(Post_model::TIPO_POST,Post_model::CATEGORY_MAIN_MENU,Post_model::STATUS_TRUE, 'asc', 8);
         $this->load->vars($pagesMenu);
@@ -76,6 +77,23 @@ class Public_Controller extends MY_Controller
             )
         ));
 
+        $this->load->vars(array(
+            'slider' => $this->Banner_model->getAll(
+                'slider',
+                Banner_model::STATUS_TRUE,
+                'desc',
+                5
+            )
+        ));
+
+        $this->load->vars(array(
+            'bannerOne' => $this->Banner_model->getAll(
+                'banner',
+                Banner_model::STATUS_TRUE,
+                'desc',
+                1
+            )
+        ));
 
     }
 

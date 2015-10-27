@@ -11,16 +11,19 @@
 			  </ol>
 			  */ ?>
 
-			  <!-- Wrapper for slides -->
-			  <div class="carousel-inner" role="listbox">
-			  	<?php for($i=1; $i<=5; $i++): ?>
-			    <div class="item">
-			      <a href="#">
-			      	<img src="<?php echo base_url() ?>assets/images/slider/<?php echo $i; ?>.jpg">
-			      </a>
-			    </div>
-			  	<?php endfor; ?>
-			  </div>
+			<!-- Wrapper for slides -->
+			<?php $pages = $this->load->get_var('slider') ?>
+			<?php if(!empty($pages) && count($pages) > 0) : ?>
+				<div class="carousel-inner" role="listbox">
+					<?php foreach ($pages as $key => $value): ?>
+						<div class="item">
+							<a href="#">
+							<img src="<?php echo base_url() ?><?php echo $value['image'] ?>">
+							</a>
+						</div>
+					<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
 
 			  <!-- Controls -->
 			  <a class="left carousel-control" href="#slider_home" role="button" data-slide="prev">
