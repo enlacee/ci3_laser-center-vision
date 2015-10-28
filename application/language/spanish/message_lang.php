@@ -41,3 +41,8 @@ $lang["msg_send_consult"] = "Enviar Consulta";
 $lang["msg_send_box_address"] = "
 Av. 6 de Diciembre N-3402 entre Eloy Alfaro y Checoslovaquia, una cuadra al norte del Consejo Nacional Electoral
 Consultas previa cita a los teléfonos";
+// url footer
+$lang["msg_footer_1"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';
+$lang["msg_footer_2"] = 'clinicas-oftalmologicas-quito-ecuador#mision';
+$lang["msg_footer_3"] = 'clinicas-oftalmologicas-quito-ecuador#cuadromedico';
+$lang["msg_footer_4"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';

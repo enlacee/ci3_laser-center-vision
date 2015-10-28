@@ -45,9 +45,16 @@ class Public_Controller extends MY_Controller
         $this->load->model('Banner_model');
         $this->load->model('Surgerie_model');
         $this->load->model('Note_model');
-        $pagesMenu = array();
-        $pagesMenu['pagesMenu'] = $this->Post_model->getAll(Post_model::TIPO_POST,Post_model::CATEGORY_MAIN_MENU,Post_model::STATUS_TRUE, 'asc', 8);
-        $this->load->vars($pagesMenu);
+
+        $this->load->vars(array(
+            'pagesMenu' =>$this->Post_model->getAll(
+                Post_model::TIPO_POST,
+                Post_model::CATEGORY_MAIN_MENU,
+                Post_model::STATUS_TRUE,
+                'asc',
+                8
+            )
+        ));
 
         $this->load->vars(array(
             'pagesCirugia' => $this->Post_model->getAll(

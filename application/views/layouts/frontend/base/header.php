@@ -7,7 +7,7 @@
 		<div class="ctn">
 			<div class="logo">
 				<a href="<?php echo base_url() ?>">
-					<img src="<?php echo base_url() ?>assets/images/logos/logo.png" alt="Logo Laser Center Vision 2020" class="img-responsive">
+					<img src="<?php echo base_url() ?>assets/images/logos/logo<?php echo getIdLanguage() ?>.png" alt="Logo Laser Center Vision 2020" class="img-responsive">
 				</a>
 			</div>
 		</div>

@@ -17,18 +17,18 @@ class Post extends Public_Controller {
 		$subPage = $this->uri->segment(2);
 
 		$title = str_replace('-', ' ', $subPage);
-
+//echo $title;exit;
 		$result = $this->Post_model->getByTitle($title);
 
 		if (is_array($result) && count($result) > 0) {
 			$rsFormat['data'] = $result;
+			$descriptionSeo = character_limiter(strip_tags($result['description']), 135);
 			$this->layout->setTitle($result['title_seo']);
-			$this->layout->setKeywords("keywords");
-			$this->layout->setDescripcion($result['description']);
+			$this->layout->setDescripcion($descriptionSeo);
 			$this->layout->setSocialSiteName("Name");
 			$this->layout->setSocialTitle($result['title_seo']);
 			$this->layout->setSocialResumen("Resumen");
-			$this->layout->setSocialDescripcion($result['description']);
+			$this->layout->setSocialDescripcion($descriptionSeo);
 
 		}
 

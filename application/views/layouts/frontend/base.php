@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="<?php echo $this->layout->getDescripcion(); ?>">
+<meta name="description" content="<?php // echo $this->layout->getDescripcion(); ?>">
 <meta name="keywords" content="<?php echo $this->layout->getKeywords(); ?>">
 <meta name="robots" content="index,follow" />
 
