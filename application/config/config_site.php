@@ -58,11 +58,11 @@ $selfbase = str_replace('index.php', '', $_SERVER['PHP_SELF']);
 $selfbase = substr($selfbase, 0 ,(strlen($selfbase)-1));
 $arrayUri = explode('/', str_replace($selfbase, '', $_SERVER['REQUEST_URI']));
 
-if (isset($arrayUri[1]) && strlen($arrayUri[1]) == 2) {
-    if (array_key_exists($arrayUri[1], $config['cs_languages'])) {
-        $config['cs_language'] = $config['cs_languages'][$arrayUri[1]];
-        $config['cs_lang'] = $arrayUri[1];
-    }
+if (isset($arrayUri[1]) && strlen($arrayUri[1]) == 2
+    && array_key_exists($arrayUri[1], $config['cs_languages'])
+) {
+    $config['cs_language'] = $config['cs_languages'][$arrayUri[1]];
+    $config['cs_lang'] = $arrayUri[1];
 } else {
     // Here change default Language
     $config['cs_language'] = 'spanish';
