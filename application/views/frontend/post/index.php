@@ -1,7 +1,7 @@
 <?php if (isset($data) && is_array($data)) : ?>
 	<?php  echo $data['description'] ?>
 <?php else: ?>
-	not found records.
+	<?php lang('msg_record_not_found') ?>
 <?php endif;?>
 
 <!-- Box form contact -->

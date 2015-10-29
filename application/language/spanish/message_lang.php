@@ -46,3 +46,4 @@ $lang["msg_footer_1"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';
 $lang["msg_footer_2"] = 'clinicas-oftalmologicas-quito-ecuador#mision';
 $lang["msg_footer_3"] = 'clinicas-oftalmologicas-quito-ecuador#cuadromedico';
 $lang["msg_footer_4"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';
+$lang["msg_record_not_found"] = 'registro no encontrado';

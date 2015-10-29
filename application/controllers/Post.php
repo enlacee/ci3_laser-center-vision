@@ -17,7 +17,6 @@ class Post extends Public_Controller {
 		$subPage = $this->uri->segment(2);
 
 		$title = str_replace('-', ' ', $subPage);
-//echo $title;exit;
 		$result = $this->Post_model->getByTitle($title);
 
 		if (is_array($result) && count($result) > 0) {
@@ -56,7 +55,15 @@ class Post extends Public_Controller {
 	*/
 	public function reservation()
 	{
-		$this->layout->view('frontend/post/reservation');
+		$this->layout->setLayout('layouts/frontend/layout-reservas');
+		$page = $this->uri->segment(1);
+		$subPage = $this->uri->segment(2);
+		$title = str_replace('-', ' ', $subPage);
+		$data = array(
+			'data' => $this->Post_model->getByTitle($title)
+		);
+		
+		$this->layout->view('frontend/post/reservation', $data);
 	}
 
 	/**
@@ -64,7 +71,6 @@ class Post extends Public_Controller {
 	*/
 	public function contact()
 	{
-
 		$this->layout->view('frontend/post/contact');
 	}
 
