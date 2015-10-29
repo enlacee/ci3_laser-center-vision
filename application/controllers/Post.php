@@ -51,4 +51,21 @@ class Post extends Public_Controller {
 		}
 	}
 
+	/**
+	* form reservation
+	*/
+	public function reservation()
+	{
+		$this->layout->view('frontend/post/reservation');
+	}
+
+	/**
+	*
+	*/
+	public function contact()
+	{
+
+		$this->layout->view('frontend/post/contact');
+	}
+
 }

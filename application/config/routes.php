@@ -58,6 +58,12 @@ $route['translate_uri_dashes'] = FALSE;
  */
 //Section example
 $route['seccion'] = 'frontend/section_ejemplo';
+$route['es/reservas'] = 'post/reservation';
+$route['es/contacto'] = 'post/contact';
+
+$route['en/reservations'] = 'post/reservation';
+$route['en/contact'] = 'post/contact';
+
 $route['serializar'] = 'post/serializar';
 
 /**
@@ -66,15 +72,6 @@ $route['serializar'] = 'post/serializar';
 
 //Section list (application/backend/list.php)
 $route['admin'] = 'backend/login';
-
-//Section list (application/backend/list.php)
-$route['admin/listado'] = 'backend/listing';
-
-//Section add (application/backend/add.php)
-$route['admin/agregar'] = 'backend/add';
-
-//Section edit (application/backend/edit.php)
-$route['admin/editar'] = 'backend/edit';
 
 /**
 * Config URL

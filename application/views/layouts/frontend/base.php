@@ -73,7 +73,7 @@
 
 		<!-- Col 2 -->
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col col_2 center-column">
-			<div class="ctn_">
+			<div class="ctn">
 				<?php echo $content_for_layout; ?>
 			</div>
 		</div>

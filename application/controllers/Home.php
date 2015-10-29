@@ -21,7 +21,6 @@ class Home extends Public_Controller {
 		$this->layout->setSocialResumen("Resumen");
 		$this->layout->setSocialDescripcion("Description");
 
-
 		//$this->lang->load("message","spanish");
 		//echo $this->lang->line("msg_hello"); exit;
 		//var_dump($this->config->item('language'));
