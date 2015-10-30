@@ -57,7 +57,6 @@ $route['translate_uri_dashes'] = FALSE;
  * routes
  */
 //Section example
-$route['seccion'] = 'frontend/section_ejemplo';
 $route['es/reservas'] = 'post/reservation';
 $route['es/contacto'] = 'post/contact';
 
@@ -71,9 +70,10 @@ $route['home/send_form_contact_all_site'] = 'home/send_form_contact_all_site';
 /**
  * Backend routes
  */
-
-//Section list (application/backend/list.php)
-$route['admin'] = 'backend/login';
+$route['admin'] = 'backend/admin';
+$route['admin/add'] = 'backend/add/index';
+$route['admin/edit'] = 'backend/edit/index';
+$route['admin/list'] = 'backend/lista/index';
 
 /**
 * Config URL

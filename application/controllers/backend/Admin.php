@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Admin extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
@@ -16,8 +16,12 @@ class Login extends CI_Controller {
 		$data["info"] = "Información";
 
 		//Layout load view
-		$this->layout->view('backend/login/index', $data);
+		$this->layout->view('backend/admin/index', $data);
 	}
+
+	public function panel()
+	{
+		
+	}
+
 }
-/* End of file Portada.php */
-/* Location: ./application/controllers/Login.php */

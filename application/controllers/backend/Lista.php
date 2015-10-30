@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Listing extends CI_Controller {
+class Lista extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
 		//Call layout
-		$this->layout->setLayout('backend/listing');
+		$this->layout->setLayout('layouts/backend/lista');
 	}
 
 	public function index()
@@ -22,7 +22,7 @@ class Listing extends CI_Controller {
 		$data["info"] = "Información";
 		
 		//Layout load view
-		$this->layout->view('listing', $data);
+		$this->layout->view('backend/lista/index', $data);
 	}
 }
 /* End of file Portada.php */

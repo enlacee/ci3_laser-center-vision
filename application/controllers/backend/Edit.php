@@ -6,7 +6,7 @@ class Edit extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		//Call layout
-		$this->layout->setLayout('backend/edit');
+		$this->layout->setLayout('layouts/backend/edit');
 	}
 
 	public function index()
@@ -23,7 +23,7 @@ class Edit extends CI_Controller {
 		$data["info"] = "Información";
 		
 		//Layout load view
-		$this->layout->view('edit', $data);
+		$this->layout->view('backend/edit/index', $data);
 	}
 }
 /* End of file Portada.php */
