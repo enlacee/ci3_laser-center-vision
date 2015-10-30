@@ -72,6 +72,7 @@ $route['home/send_form_contact_all_site'] = 'home/send_form_contact_all_site';
  */
 $route['admin'] = 'backend/admin';
 $route['admin/add'] = 'backend/add/index';
+$route['admin/edit/(.*)'] = 'backend/edit/index';
 $route['admin/edit'] = 'backend/edit/index';
 $route['admin/list'] = 'backend/lista/index';
 

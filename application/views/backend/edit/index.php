@@ -1,7 +1,9 @@
-<!--Body-->
+<?php if(isset($data)): ?>
 <section id="#a_body">
   <article>
     <div class="container">
+      <pre><?php echo !empty($data['result']) ? $data['result'] : ''; ?>
+      </pre>
       <div class="row">
         <div class="col-xs-12 frame">
           
@@ -24,71 +26,62 @@
                 <tbody>
 
                   <tr>
-                    <td><span>Nombre:</span></td>
+                    <td><span>id:</span></td>
                     <td>
                       <div class="form-group">
-                        <input type="text" class="form-control" id="names" name="names" placeholder="Ingrese su nombre">
+                        <input type="text" class="form-control" id="id" name="id"
+                        value="<?php echo !empty($data['id']) ? $data['id'] : '' ?>" readonly>
                       </div>
                     </td>
                   </tr>
-
                   <tr>
-                    <td><span>Email:</span></td>
+                    <td><span>id_language:</span></td>
                     <td>
                       <div class="form-group">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su email">
+                        <input type="text" class="form-control" id="id_language" name="id_language"
+                        value="<?php echo !empty($data['id_language']) ? $data['id_language'] : '' ?>" disabled="disabled">
                       </div>
                     </td>
                   </tr>
 
                   <tr>
-                    <td><span>País:</span></td>
+                    <td><span>title:</span></td>
                     <td>
                       <div class="form-group">
-                        <select name="pais" id="pais" class="form-control">
-                          <option value="">Seleccione</option>
-                          <option value="Aruba">Aruba</option>
-                          <option value="mexico">Mexico</option>
-                          <option value="venezuela">Venezuela</option>
-                        </select>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Ingrese su nombre"
+                        value="<?php echo !empty($data['title']) ? $data['title'] : '' ?>">
                       </div>
                     </td>
                   </tr>
 
                   <tr>
-                    <td><span>Sexo:</span></td>
-                    <td>
-                      <div class="radio_input">
-                        <div class="form-group">
-                          Mujer&nbsp;<input type="radio" name="sexo" value="m">&nbsp;&nbsp;
-                          Hombre&nbsp;<input type="radio" name="sexo" value="h">
-                        </div>                        
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><span>Opciones:</span></td>
-                    <td>
-                      <div class="checkbox">
-                        <div class="form-group">
-                          <ul>
-                            <li class="text1"><input type="checkbox" name="opciones[]" value="opcion 1">Opción 1</li>
-                            <li class="text2"><input type="checkbox" name="opciones[]" value="opcion 2">Opción 2</li> 
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td><span>Descripción:</span></td>
+                    <td><span>title_seo:</span></td>
                     <td>
                       <div class="form-group">
-                        <textarea name="description" id="description"  class="form-control" cols="30" rows="10"></textarea>
+                        <input type="text" class="form-control" id="title_seo" name="title_seo" 
+                        value="<?php echo !empty($data['title_seo']) ? $data['title_seo'] : '' ?>" >
                       </div>
                     </td>
                   </tr>
+
+                  <tr>
+                    <td><span>desccription:</span></td>
+                    <td>
+                      <div class="form-group">
+                        <textarea name="description" id="description"  class="form-control" cols="30" rows="10"><?php echo !empty($data['description']) ? $data['description'] : '' ?></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span>description_seo:</span></td>
+                    <td>
+                      <div class="form-group">
+                        <textarea name="description_seo" id="description_seo"  class="form-control" cols="30" rows="10"><?php echo !empty($data['description_seo']) ? $data['description_seo'] : '' ?></textarea>
+                      </div>
+                    </td>
+                  </tr>
+
+                  
 
                   <tr>
                     <td><span>Acciones</span></td>
@@ -111,4 +104,6 @@
     </div>
   </article><!--End article-->  
 </section>
-<!--End body-->
+<?php else: ?>
+  registro no encontrado.
+<?php endif; ?>
