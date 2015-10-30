@@ -65,6 +65,8 @@ $route['en/reservations'] = 'post/reservation';
 $route['en/contact'] = 'post/contact';
 
 $route['serializar'] = 'post/serializar';
+$route['home/send_form_contact_all_site'] = 'home/send_form_contact_all_site';
+
 
 /**
  * Backend routes

@@ -56,8 +56,14 @@ class Post_model  extends CI_Model {
                 $this->db->limit($limit);
             }
             //order
-            if (!empty($order)) {
+            if (!empty($order) && ($order == 'order_asc' || $order == 'order_desc')) {
+                $myorder = str_replace('order_', '', $order);
+                $this->db->order_by('order', $myorder);
+            }else {
                 $this->db->order_by('created_at', $order);
+            }
+            if (!empty($order)) {
+
             }
             //$this->db->limit($limit, $offset);
             $query = $this->db->get();

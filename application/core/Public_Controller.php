@@ -51,7 +51,7 @@ class Public_Controller extends MY_Controller
                 Post_model::TIPO_POST,
                 Post_model::CATEGORY_MAIN_MENU,
                 Post_model::STATUS_TRUE,
-                'asc',
+                'order_asc',
                 8
             )
         ));
