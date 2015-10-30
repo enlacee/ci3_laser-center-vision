@@ -61,8 +61,7 @@ class Post extends Public_Controller {
 		$subPage = $this->uri->segment(2);
 		$title = str_replace('-', ' ', $subPage);
 		$data = array(
-			'data' => $this->Post_model->getByTitle($title),
-			'data_options' => $this->MetaData_model->getAll('form_problem_visual', 18)
+			'data' => $this->Post_model->getByTitle($title)
 		);
 
 		$this->layout->view('frontend/post/reservation', $data);
@@ -74,11 +73,8 @@ class Post extends Public_Controller {
 	public function contact()
 	{
 		$this->load->model('MetaData_model');
-		$data = array(
-			'data_options' => $this->MetaData_model->getAll('form_problem_visual', 18)
-		);
 
-		$this->layout->view('frontend/post/contact', $data);
+		$this->layout->view('frontend/post/contact');
 	}
 
 }

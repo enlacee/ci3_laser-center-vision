@@ -46,7 +46,8 @@ $config['cs_youtube'] = '@youtube';
 //Instagram Account
 $config['cs_instagram'] = '@instagram';
 
-
+//Email contact
+$config['cs_email_contact'] = 'peperios@mailinator.com';
 /**
 * Extra by anibal
 * default language

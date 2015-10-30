@@ -62,16 +62,17 @@
                 <div class="col-sm-6 interesCustom">
                   <div class="form-group">
                     <label for="interes"><?php echo lang('msg_visual_problem') ?>:</label>
-                    <select name="interes" id="interes" class="{required:true} form-control">
-                        <option value=""><?php echo lang('msg_select') ?></option>
-                        <?php if(isset($data_options) && count($data_options) > 0) : ?>
-                            <?php foreach ($data_options as $key => $value): ?>
-                                <option value="<?php echo $key ?>"><?php echo $value['meta_value'] ?></option>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <?php echo lang('msg_record_not_found') ?>
-                        <?php endif ?>
-                    </select>
+                    <?php $interes = $this->load->get_var('interes'); ?>
+        			<select name="interes" id="interes" class="{required:true} form-control">
+        				<option value=""><?php echo lang('msg_select') ?></option>
+        				<?php if(isset($interes) && count($interes) > 0) : ?>
+        					<?php foreach ($interes as $key => $value): ?>
+                                <option value="<?php echo $key ?>*<?php echo $value['meta_value'] ?>"><?php echo $value['meta_value'] ?></option>
+        					<?php endforeach; ?>
+        				<?php else: ?>
+        					<option value=""><?php echo lang('msg_record_not_found') ?></option>
+        				<?php endif ?>
+        			</select>
                   </div>
                 </div>
 

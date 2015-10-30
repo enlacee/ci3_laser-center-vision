@@ -77,10 +77,10 @@
 					<option value=""><?php echo lang('msg_select') ?></option>
 					<?php if(isset($data_options) && count($data_options) > 0) : ?>
 						<?php foreach ($data_options as $key => $value): ?>
-							<option value="<?php echo $key ?>"><?php echo $value['meta_value'] ?></option>
+							<option value="<?php echo $key ?>*<?php echo $value['meta_value'] ?>"><?php echo $value['meta_value'] ?></option>
 						<?php endforeach; ?>
 					<?php else: ?>
-						<?php echo lang('msg_record_not_found') ?>
+						<option value=""><?php echo lang('msg_record_not_found') ?></option>
 					<?php endif ?>
 				</select>
 				</div>

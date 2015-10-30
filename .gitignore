@@ -16,3 +16,6 @@
 ## composer
 /vendor
 /composer.lock
+
+## aplication
+/application/config/email.php

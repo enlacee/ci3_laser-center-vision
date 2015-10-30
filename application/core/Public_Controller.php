@@ -45,6 +45,7 @@ class Public_Controller extends MY_Controller
         $this->load->model('Banner_model');
         $this->load->model('Surgerie_model');
         $this->load->model('Note_model');
+        $this->load->model('MetaData_model');
 
         $this->load->vars(array(
             'pagesMenu' =>$this->Post_model->getAll(
@@ -118,6 +119,10 @@ class Public_Controller extends MY_Controller
                 'asc',
                 4
             )
+        ));
+
+        $this->load->vars(array(
+            'interes' => $this->MetaData_model->getAll('form_problem_visual', 18)
         ));
 
     }

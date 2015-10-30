@@ -67,15 +67,50 @@ class Home extends Public_Controller {
      */
 	public function send_form_contact_all_site()
 	{
+		$response = false;
+
 		if( ! $this->input->is_ajax_request() ) {
 			show_404();
-		}
+		} else {
 
-		//Response
-		$response = array(
-			'respuesta' => true,
-			'mensaje' => "Mensaje enviado!"
-        );
+			$dataPost = array(
+				'nombre' => $this->security->xss_clean($this->input->post('nombres')),
+				'edad' => $this->security->xss_clean($this->input->post('edad')),
+				'direccion' => $this->security->xss_clean($this->input->post('direccion')),
+				'ciudad' => $this->security->xss_clean($this->input->post('ciudad')),
+				'telefono' => $this->security->xss_clean($this->input->post('telefono')),
+				'celular' => $this->security->xss_clean($this->input->post('celular')),
+				'interes' => $this->security->xss_clean($this->input->post('interes')),
+				'email' => $this->security->xss_clean($this->input->post('email')),
+				'mensaje' => $this->security->xss_clean($this->input->post('mensaje'))
+			);
+			if (!empty($dataPost['nombre']) && !empty($dataPost['email'])) {
+
+				$this->load->library('email');// load email library
+			    $this->email->from($this->config->item('smtp_user'), $this->config->item('cs_name'));
+			    $this->email->to($this->config->item('cs_email_contact'));
+			    $this->email->subject("Mensaje Contacto *" . $dataPost['nombre']);
+				$this->email->set_mailtype('html');
+				// this will return you html data as message
+				$message = $this->load->view('frontend/_emails/contact', array('data' => $dataPost), TRUE);
+				$this->email->message($message);
+			    if ($this->email->send()) {
+					//con esto podemos ver el resultado
+					var_dump($this->email->print_debugger());
+					$response = array(
+						'respuesta' => true,
+						'mensaje' => "Mensaje enviado!"
+			        );
+				} else {
+					//con esto podemos ver el resultado
+					var_dump($this->email->print_debugger());
+					$response = array(
+						'respuesta' => false,
+						'mensaje' => "No se envio pudo enviar tu correo, intentelo luego"
+					);
+				}
+			}
+		}
 
 		echo json_encode($response);
 	}

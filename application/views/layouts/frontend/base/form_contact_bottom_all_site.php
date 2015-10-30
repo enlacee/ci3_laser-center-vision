@@ -11,7 +11,8 @@ info@lasercentervision2020.com
 
 
 <div class="box">
-	<form name="formContacto" id="formContacto" class="formContacto" method="post" action="">
+	<form name="formContacto" id="formContacto" class="formContacto" method="post"
+		action="<?php echo base_url() ?>home/send_form_contact_all_site">
     <fieldset id="datosForm">
       <div class='row clearfix'>
 
@@ -67,15 +68,17 @@ info@lasercentervision2020.com
         <div class='col-sm-6 interesCustom'>
           <div class='form-group'>
             <label for="interes">Problema Visual:</label>
-            <select name="interes" id="interes" class="form-control">
-                <option value=""><?php echo lang('msg_select') ?></option>
-				<?php $pages = $this->load->get_var('surgerie') ?>
-				<?php if(!empty($pages) && count($pages) > 0) : ?>
-					<?php foreach ($pages as $key => $value): ?>
-						<option value="<?php echo $value['id'] ?>"><?php echo strtoupper($value['name']) ?></option>
+			<?php $interes = $this->load->get_var('interes'); ?>
+			<select name="interes" id="interes" class="{required:true} form-control">
+				<option value=""><?php echo lang('msg_select') ?></option>
+				<?php if(isset($interes) && count($interes) > 0) : ?>
+					<?php foreach ($interes as $key => $value): ?>
+						<option value="<?php echo $key ?>*<?php echo $value['meta_value'] ?>"><?php echo $value['meta_value'] ?></option>
 					<?php endforeach; ?>
-				<?php endif; ?>
-            </select>
+				<?php else: ?>
+					<option value=""><?php echo lang('msg_record_not_found') ?></option>
+				<?php endif ?>
+			</select>
           </div>
         </div>
 
