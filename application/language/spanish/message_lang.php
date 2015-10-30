@@ -38,6 +38,9 @@ $lang["msg_set_message"] = "Coloque su mensaje";
 $lang["msg_send_consult"] = "Enviar Consulta";
 $lang["msg_send"] = "Enviar";
 $lang["msg_back"] = "Volver";
+$lang["msg_information"] = "Información";
+$lang["msg_red_of_contact"] = "Medios de contacto";
+$lang["msg_insurance"] = "Aseguradoras";
 //html
 $lang["msg_send_box_address"] = "
 Av. 6 de Diciembre N-3402 entre Eloy Alfaro y Checoslovaquia, una cuadra al norte del Consejo Nacional Electoral
@@ -47,6 +50,21 @@ $lang["msg_footer_1"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';
 $lang["msg_footer_2"] = 'clinicas-oftalmologicas-quito-ecuador#mision';
 $lang["msg_footer_3"] = 'clinicas-oftalmologicas-quito-ecuador#cuadromedico';
 $lang["msg_footer_4"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';
+$lang["msg_footer_5"] = 'servicios-de-oftalmologia-quito-ecuador';
+$lang["msg_footer_6"] = 'preguntas-de-cirugia-de-ojos-quito-ecuador';
+$lang["msg_footer_7"] = 'videos-testimonios-de-operaciones-de-ojos-quito-ecuador';
+$lang["msg_footer_contact"] = 'conctacto';
+$lang["msg_footer_reservations"] = 'reservas';
+//
+$lang["msg_footer_us"] = 'Quienes Somos?';
+$lang["msg_footer_mission_vision"] = 'Misión Visión';
+$lang["msg_footer_medical_box"] = 'Cuadro Medico'; // Cuadro medico
+$lang["msg_footer_location"] = 'Ubicación';
+$lang["msg_footer_technologie"] = 'Tecnología';
+$lang["msg_footer_quiz_visual"] = 'Exámenes visuales';
+$lang["msg_footer_frequent_questions"] = 'Preguntas frecuentes';
+$lang["msg_footer_testimonials"] = 'Testimonios';
+//
 $lang["msg_record_not_found"] = 'registro no encontrado';
 // form contact
 $lang['msg_form_cantact_title'] = 'FORMULARIO DE CONSULTA OFTALMOLÓGICA';

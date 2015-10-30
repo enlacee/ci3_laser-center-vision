@@ -56,10 +56,10 @@
 	  	<div class="box_ctn">
 		    <h3>Nuestra Clínica</h3>
 		    <ul>
-		      <li><a href="#">Quienes Somos?</a></li>
-		      <li><a href="#">Misión y Visión</a></li>
-		      <li><a href="#">Cuadro Médico</a></li>
-		      <li><a href="#">Ubicación</a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_1')) ?>"><?php echo lang('msg_footer_us')?></a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_2')) ?>"><?php echo lang('msg_footer_mission_vision')?></a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_3')) ?>"><?php echo lang('msg_footer_medical_box')?></a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_4')) ?>"><?php echo lang('msg_footer_location')?></a></li>
 		    </ul>
 	    </div>
 	  </div>
@@ -68,12 +68,12 @@
 	  <!-- Box -->
 	  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 box box_2 sm568Max_width_100">
 	  	<div class="box_ctn">
-		    <h3>Información</h3>
+		    <h3><?php echo lang('msg_information') ?></h3>
 		    <ul>
-		      <li><a href="#">Tecnología</a></li>
-		      <li><a href="#">Exámenes visuales</a></li>
-		      <li><a href="#">Preguntas frecuentes</a></li>
-		      <li><a href="#">Testimonios</a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_5')) ?>"><?php echo lang('msg_footer_technologie')?></a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_5')) ?>"><?php echo lang('msg_footer_quiz_visual')?></a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_6')) ?>"><?php echo lang('msg_footer_frequent_questions')?></a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_7')) ?>"><?php echo lang('msg_footer_testimonials')?></a></li>
 		    </ul>
 	    </div>
 	  </div>
@@ -82,10 +82,10 @@
 	  <!-- Box -->
 	  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 box box_3 sm568Max_width_100">
 	  	<div class="box_ctn">
-		    <h3>Medios de contacto</h3>
+		    <h3><?php echo lang('msg_red_of_contact') ?></h3>
 		    <ul>
-		      <li><a href="#">Contacto</a></li>
-		      <li><a href="#">Cita virtual</a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_contact')) ?>"><?php echo lang('msg_footer_contact')?></a></li>
+		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_reservations')) ?>"><?php echo lang('msg_footer_reservations')?></a></li>
 		      <li><a href="#" target="_blank">Facebook</a></li>
 		      <li><a href="#" target="_blank">Twitter</a></li>
 		    </ul>
@@ -96,7 +96,7 @@
 	  <!-- Box -->
 	  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 box box_4 sm568Max_width_100">
 	  	<div class="box_ctn">
-		    <h3>Aseguradoras</h3>
+		    <h3><?php echo lang('msg_insurance') ?></h3>
 		    <ul>
 		      <li><a href="http://www.ecuasanitas.info/newecua.php?c=43" target="_blank">EcuaSanitas</a></li>
 		      <li><a href="http://www.segurosinteroceanica.com/" target="_blank">Interoceanica</a></li>

@@ -85,7 +85,15 @@ class Home extends Public_Controller {
 				'mensaje' => $this->security->xss_clean($this->input->post('mensaje'))
 			);
 			if (!empty($dataPost['nombre']) && !empty($dataPost['email'])) {
-
+				$this->load->library('email');// load email library
+				$this->email->clear();
+			    $this->email->to('detopst.tk@gmail.com');
+			    $this->email->from('acopitan@gmail.com');
+			    $this->email->subject('Here is your info ccc');
+			    $this->email->message('Hi ccc Here is the info you requested.');
+			    $this->email->send();
+				var_dump($this->email->print_debugger());exit;
+/*
 				$this->load->library('email');// load email library
 			    $this->email->from($this->config->item('smtp_user'), $this->config->item('cs_name'));
 			    $this->email->to($this->config->item('cs_email_contact'));
@@ -109,6 +117,7 @@ class Home extends Public_Controller {
 						'mensaje' => "No se envio pudo enviar tu correo, intentelo luego"
 					);
 				}
+				*/
 			}
 		}
 

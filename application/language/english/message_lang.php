@@ -38,6 +38,9 @@ $lang["msg_set_message"] = "Message here";
 $lang["msg_send_consult"] = "Send Consult";
 $lang["msg_send"] = "Send";
 $lang["msg_back"] = "Back";
+$lang["msg_information"] = "Information";
+$lang["msg_red_of_contact"] = "Networks Contacts";
+$lang["msg_insurance"] = "Nsurances";
 //html
 $lang["msg_send_box_address"] = "
 Av. 6 de Diciembre N-3402 Accross the street from Eloy Alfaro and Checoslovaquia, to one block Nort of the Consejo Nacional Electoral
@@ -47,6 +50,25 @@ $lang["msg_footer_1"] = 'clinicts-ophthalmological-quito-ecuador#quienes';
 $lang["msg_footer_2"] = 'clinicts-ophthalmological-quito-ecuador#mision';
 $lang["msg_footer_3"] = 'clinicts-ophthalmological-quito-ecuador#cuadromedico';
 $lang["msg_footer_4"] = 'clinicts-ophthalmological-quito-ecuador#quienes';
+$lang["msg_footer_5"] = 'services-of-ophthalmology-quito-ecuador';
+$lang["msg_footer_6"] = 'question-eye-surgery-quito-ecuador';
+$lang["msg_footer_7"] = 'videos-testimonios-eye-operations-quito-ecuador';
+$lang["msg_footer_contact"] = 'contact';
+$lang["msg_footer_reservations"] = 'reservations';
+$lang["msg_footer_technologie"] = 'Technologie';
+$lang["msg_footer_quiz_visual"] = 'Quiz visual';
+$lang["msg_footer_frequent_questions"] = 'Frequent Questions';
+$lang["msg_footer_testimonials"] = 'Testimonials';
+// more footer
+$lang["msg_footer_us"] = 'Us';
+$lang["msg_footer_mission_vision"] = 'Mission Vision';
+$lang["msg_footer_medical_box"] = 'Medical Box'; // Cuadro medico
+$lang["msg_footer_location"] = 'Location';
+$lang["msg_footer_technologie"] = 'Technologie';
+$lang["msg_footer_quiz_visual"] = 'Quiz visual';
+$lang["msg_footer_frequent_questions"] = 'Frequent Questions';
+$lang["msg_footer_testimonials"] = 'Testimonials';
+//
 $lang["msg_record_not_found"] = 'record not found';
 // form contact
 $lang['msg_form_cantact_title'] = 'ENQUIRY FORM OFTALMOLOGICA';
