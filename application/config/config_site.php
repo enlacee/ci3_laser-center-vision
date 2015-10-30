@@ -1,7 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 /**
  * General settings website
  * Title, names, currencies, social account, extensions etc ...
@@ -12,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['cs_lang'] = 'es';
 
 //Site name
-$config['cs_name'] = 'Title site';
+$config['cs_name'] = 'LCV';
 
 //Currency site
 $config['cs_currency'] = '€';

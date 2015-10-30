@@ -36,7 +36,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/config.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/main_home.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
-<script type="text/javascript" src="<?php echo base_url() ?> assets/lib/respond/dest/respond.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/lib/respond/dest/respond.min.js"></script>
 
 <!--Add CSS (Layout)-->
 <?php echo $this->layout->css; ?>

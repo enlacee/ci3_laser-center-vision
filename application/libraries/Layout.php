@@ -32,9 +32,9 @@ class Layout
 /**
 	 * Variables para mejorar el SEO del sitio
 	 * @var sting
-	 */	
-	public $title = 'Titulo_web';	
-	public $keywords = 'keywords';	
+	 */
+	public $title = 'Titulo_web';
+	public $keywords = 'keywords';
 	public $descripcion = 'descripcion';
 	public $social_site_name = 'social_site_name';
 	public $social_title = 'social_title';
@@ -90,12 +90,12 @@ class Layout
      * @return Array
      */
     private function _formatTitle()
-    {        
-        $pageTitle = (defined('TITLE')) ? TITLE : 'Defautl';
+    {
+        $pageTitle = ($this->CI->config->item('cs_name')) ? $this->CI->config->item('cs_name') : 'Defautl';
         if (isset($this->title)) {
             $this->title = $this->title . ' | '. $pageTitle;
         } else {
-            $this->title = 'default' . ' | '. $pageTitle; 
+            $this->title = 'default' . ' | '. $pageTitle;
         }
     }
 
@@ -169,7 +169,7 @@ class Layout
 	public function getSocialResumen() {
 		return $this->social_resumen;
 	}
-	
+
 	public function getSocialDescripcion() {
 		return $this->social_descripcion;
 	}
