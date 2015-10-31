@@ -58,6 +58,8 @@ $route['translate_uri_dashes'] = FALSE;
  */
 //Section example
 $route['es/consulta-medica-online-cita-oftalmologica-virtual-medico-online'] = 'post/reservation';
+$route['es/reservas'] = 'post/reservation';
+
 $route['es/contacto'] = 'post/contact';
 
 $route['en/reservations'] = 'post/reservation';

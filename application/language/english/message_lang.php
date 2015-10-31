@@ -46,10 +46,10 @@ $lang["msg_send_box_address"] = "
 Av. 6 de Diciembre N-3402 Accross the street from Eloy Alfaro and Checoslovaquia, to one block Nort of the Consejo Nacional Electoral
 Consult prev date to thelephones";
 // url footer
-$lang["msg_footer_1"] = 'clinicts-ophthalmological-quito-ecuador#quienes';
-$lang["msg_footer_2"] = 'clinicts-ophthalmological-quito-ecuador#mision';
-$lang["msg_footer_3"] = 'clinicts-ophthalmological-quito-ecuador#cuadromedico';
-$lang["msg_footer_4"] = 'clinicts-ophthalmological-quito-ecuador#quienes';
+$lang["msg_footer_1"] = 'the-ophthalmology-clinic-quito-ecuador#quienes';
+$lang["msg_footer_2"] = 'the-ophthalmology-clinic-quito-ecuador#mision';
+$lang["msg_footer_3"] = 'the-ophthalmology-clinic-quito-ecuador#cuadromedico';
+$lang["msg_footer_4"] = 'location-clinic-laser-center-vision';
 $lang["msg_footer_5"] = 'services-of-ophthalmology-quito-ecuador';
 $lang["msg_footer_6"] = 'question-eye-surgery-quito-ecuador';
 $lang["msg_footer_7"] = 'videos-testimonios-eye-operations-quito-ecuador';

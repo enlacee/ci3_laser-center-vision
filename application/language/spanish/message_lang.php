@@ -49,11 +49,11 @@ Consultas previa cita a los teléfonos";
 $lang["msg_footer_1"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';
 $lang["msg_footer_2"] = 'clinicas-oftalmologicas-quito-ecuador#mision';
 $lang["msg_footer_3"] = 'clinicas-oftalmologicas-quito-ecuador#cuadromedico';
-$lang["msg_footer_4"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';
+$lang["msg_footer_4"] = 'ubicacion-clinica-laser-center-vision';
 $lang["msg_footer_5"] = 'servicios-de-oftalmologia-quito-ecuador';
 $lang["msg_footer_6"] = 'preguntas-de-cirugia-de-ojos-quito-ecuador';
 $lang["msg_footer_7"] = 'videos-testimonios-de-operaciones-de-ojos-quito-ecuador';
-$lang["msg_footer_contact"] = 'conctacto';
+$lang["msg_footer_contact"] = 'contacto';
 $lang["msg_footer_reservations"] = 'reservas';
 //
 $lang["msg_footer_us"] = 'Quienes Somos?';
