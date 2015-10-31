@@ -27,7 +27,7 @@ class Surgerie_model  extends CI_Model {
             . '_' . $order . $limit . '_' . $offset .'_'.$this->id_lang;
         $rs = $this->cache->file->get($keyCache);
 
-        if ($rs == false) {
+        if ($rs == false && $this->cache_status == false) {
             $this->db->select()->from($this->_table);
             if(!empty($status)) {
                 $this->db->where('status', $status);
@@ -42,7 +42,7 @@ class Surgerie_model  extends CI_Model {
             }
             //order
             if (!empty($order)) {
-                $this->db->order_by('cant', $order);
+                $this->db->order_by('order', $order);
             }
             //$this->db->limit($limit, $offset);
             $query = $this->db->get();

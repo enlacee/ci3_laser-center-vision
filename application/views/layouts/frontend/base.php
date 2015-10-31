@@ -60,7 +60,7 @@
 
 
 	<!-- Slider -->
-	<?php //$this->load->view("layouts/frontend/base/slider.php"); ?>
+	<?php $this->load->view("layouts/frontend/base/slider.php"); ?>
 	<!--/ Slider -->
 
 

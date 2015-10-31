@@ -16,7 +16,7 @@ class MY_Controller extends CI_Controller
         //$this->load->driver('cache');
         ENVIRONMENT != 'development' || $this->output->enable_profiler(TRUE);
         $this->id_lang = $this->getIdLanguage();
-        $this->cache_status = (ENVIRONMENT == 'development') ? false : true;
+        $this->cache_status = (ENVIRONMENT == 'development') ? true : false;
     }
 
     /**

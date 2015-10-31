@@ -56,7 +56,7 @@ $lang["msg_footer_7"] = 'videos-testimonios-eye-operations-quito-ecuador';
 $lang["msg_footer_contact"] = 'contact';
 $lang["msg_footer_reservations"] = 'reservations';
 $lang["msg_footer_technologie"] = 'Technologie';
-$lang["msg_footer_quiz_visual"] = 'Quiz visual';
+$lang["msg_footer_quiz_visual"] = 'Test visual';
 $lang["msg_footer_frequent_questions"] = 'Frequent Questions';
 $lang["msg_footer_testimonials"] = 'Testimonials';
 // more footer
@@ -65,7 +65,6 @@ $lang["msg_footer_mission_vision"] = 'Mission Vision';
 $lang["msg_footer_medical_box"] = 'Medical Box'; // Cuadro medico
 $lang["msg_footer_location"] = 'Location';
 $lang["msg_footer_technologie"] = 'Technologie';
-$lang["msg_footer_quiz_visual"] = 'Quiz visual';
 $lang["msg_footer_frequent_questions"] = 'Frequent Questions';
 $lang["msg_footer_testimonials"] = 'Testimonials';
 //

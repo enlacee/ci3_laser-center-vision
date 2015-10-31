@@ -108,7 +108,7 @@ class Public_Controller extends MY_Controller
         $this->load->vars(array(
             'surgerie' => $this->Surgerie_model->getAll(
                 Surgerie_model::STATUS_TRUE,
-                'desc',
+                'asc',
                 25
             )
         ));
