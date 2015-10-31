@@ -41,7 +41,7 @@ class Post_model  extends CI_Model {
             . $this->id_lang;
         $rs = $this->cache->file->get($keyCache);
 
-        if ($rs == false) {
+        if (TRUE/*$rs == false*/) {
             $this->db->select()->from($this->_name);
             $this->db->where('post_type', $post_type);
             if(!empty($category)) {
@@ -88,7 +88,7 @@ class Post_model  extends CI_Model {
         $keyCache = __CLASS__ . __FUNCTION__ .'_'. $title.'_'.$this->id_lang;
         $rs = $this->cache->file->get($keyCache);
 
-        if ($rs == false) {
+        if (true/*$rs == false*/) {
             $this->db->select()->from($this->_name);
             $this->db->like('title_seo', $title);
             $this->db->where('id_language', $this->id_lang);
@@ -112,7 +112,7 @@ class Post_model  extends CI_Model {
         $keyCache = __CLASS__ . __FUNCTION__ . '_' . 'home'.'_'.$this->id_lang;;
         $rs = $this->cache->file->get($keyCache);
 
-        if ($rs == false) {
+        if (true/*$rs == false*/) {
             $this->db->select()->from($this->_name);
             $this->db->where('id_language', $this->id_lang);
             $this->db->where('post_type', Post_model::TIPO_POST);

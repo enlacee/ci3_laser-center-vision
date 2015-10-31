@@ -13,24 +13,28 @@ class Home extends Public_Controller {
 
 	public function index()
 	{
-		$this->layout->setTitle("Home");
-		$this->layout->setKeywords("keywords");
-		$this->layout->setDescripcion("Descripción");
-		$this->layout->setSocialSiteName("Name");
-		$this->layout->setSocialTitle("Title");
-		$this->layout->setSocialResumen("Resumen");
-		$this->layout->setSocialDescripcion("Description");
+
 
 		//$this->lang->load("message","spanish");
 		//echo $this->lang->line("msg_hello"); exit;
 		//var_dump($this->config->item('language'));
 
-		$params = array(
+		$data = array(
 			'data' => $this->Post_model->getHome()
 		);
+		$params = $data['data'];
+		if (is_array($params) && count($params) > 0) {
+			$descriptionSeo = character_limiter(strip_tags($params['description']), 135);
+			$this->layout->setTitle($params['title_seo']);
+			$this->layout->setDescripcion($descriptionSeo);
+			$this->layout->setSocialSiteName("Name");
+			$this->layout->setSocialTitle($params['title_seo']);
+			$this->layout->setSocialResumen("Resumen");
+			$this->layout->setSocialDescripcion($descriptionSeo);
+		}
 
 		//Layout load view
-		$this->layout->view('frontend/home/index', $params);
+		$this->layout->view('frontend/home/index', $data);
 	}
 
 

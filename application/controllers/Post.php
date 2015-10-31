@@ -63,6 +63,11 @@ class Post extends Public_Controller {
 		$data = array(
 			'data' => $this->Post_model->getByTitle($title)
 		);
+		if (is_array($data['data']) && count($data['data']) > 0) {	
+			$this->layout->setTitle($data['data']['title_seo']);
+			$descriptionSeo = character_limiter(strip_tags($data['data']['description']), 135);
+			$this->layout->setDescripcion($descriptionSeo);
+		}
 
 		$this->layout->view('frontend/post/reservation', $data);
 	}
@@ -73,6 +78,13 @@ class Post extends Public_Controller {
 	public function contact()
 	{
 		$this->load->model('MetaData_model');
+		$page = $this->uri->segment(1);
+		$subPage = $this->uri->segment(2);
+		$title = str_replace('-', ' ', $subPage);
+
+		if (!empty($title)) {
+			$this->layout->setTitle(ucfirst($title));
+		}
 
 		$this->layout->view('frontend/post/contact');
 	}

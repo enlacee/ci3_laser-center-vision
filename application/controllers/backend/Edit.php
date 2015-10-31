@@ -33,21 +33,33 @@ class Edit extends Admin_Controller {
 		} else {
 
 		}
+
 		$data['data'] = $this->getData();
-//var_dump($data['data']);EXIT;
+
 		//Layout load view
 		$this->layout->view('backend/edit/index', $data);
 	}
 
+	/**
+	* set idLanguage (1= spanish,2 = english)
+	*/
 	public function getData()
 	{	
 		$data = array();
 		$page = $this->uri->segment(1);
 		$subPage = $this->uri->segment(2);
 		$string = $this->uri->segment(3);
+
+		$idLang = (int) substr($string, 0, 1);
+		$title = substr($string, 1, strlen($string));
+		if ($idLang == 0) {
+			$idLang = 1;
+		}
+		// set $this->id_lang (id languague general)
+		$this->id_lang = $idLang;
  
-		if (!empty($string)) {
-			$title = str_replace('-', ' ', $string);
+		if (!empty($title)) {
+			$title = str_replace('-', ' ', $title);
 			$data = $this->Post_model->getByTitle($title);
 			
 		}
