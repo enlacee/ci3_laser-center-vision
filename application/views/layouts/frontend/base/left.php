@@ -53,13 +53,13 @@
 			<!-- Box -->
 			<div class="box">
 				<h3><i class="fa fa-share-alt"></i><?php echo strtoupper(lang('msg_follow_us')) ?></h3>
-				<a href="#" target="_blank">
+				<a href="https://www.facebook.com/lasercentervision2020" target="_blank">
 					<img src="<?php echo base_url() ?>assets/images/logos/facebook.jpg" alt="Siguenos en Facebook">
 				</a>
-				<a href="#" target="_blank">
+				<a href="https://www.youtube.com/user/LCVision2020" target="_blank">
 					<img src="<?php echo base_url() ?>assets/images/logos/youtube.jpg" alt="Siguenos en Youtube">
 				</a>
-				<a href="#" target="_blank">
+				<a href="https://twitter.com/LCVision2020" target="_blank">
 					<img src="<?php echo base_url() ?>assets/images/logos/twitter.jpg" alt="Siguenos en Twitter">
 				</a>
 			</div>

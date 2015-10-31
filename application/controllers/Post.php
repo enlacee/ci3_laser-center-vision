@@ -17,6 +17,7 @@ class Post extends Public_Controller {
 		$subPage = $this->uri->segment(2);
 
 		$title = str_replace('-', ' ', $subPage);
+		$title = $this->security->xss_clean($title);
 		$result = $this->Post_model->getByTitle($title);
 
 		if (is_array($result) && count($result) > 0) {
@@ -42,7 +43,7 @@ class Post extends Public_Controller {
 		if ($this->input->post()) {
 			$this->input->post('content');
 			$a = array(
-				'title' => $this->input->post('title'),
+				'title' => $this->security->xss_clean($this->input->post('title')),
 				'content' => $this->input->post('content')
 			);
 			echo serialize($a);
@@ -60,6 +61,7 @@ class Post extends Public_Controller {
 		$page = $this->uri->segment(1);
 		$subPage = $this->uri->segment(2);
 		$title = str_replace('-', ' ', $subPage);
+		$title = $this->security->xss_clean($title);
 		$data = array(
 			'data' => $this->Post_model->getByTitle($title)
 		);
@@ -83,6 +85,7 @@ class Post extends Public_Controller {
 		$title = str_replace('-', ' ', $subPage);
 
 		if (!empty($title)) {
+			$title = $this->security->xss_clean($title);
 			$this->layout->setTitle(ucfirst($title));
 		}
 
