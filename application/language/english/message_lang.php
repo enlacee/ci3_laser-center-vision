@@ -88,3 +88,4 @@ $lang['msg_hour'] = 'Hour';
 $lang['msg_minutes'] = 'Minutes';
 $lang['msg_message_form2'] = 'Details visual problem with the patient';
 $lang['msg_set_message_form2'] = 'Place the details of your inquiry';
+$lang['msg_last_update'] = 'Last Update: January 2015';

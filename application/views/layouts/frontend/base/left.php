@@ -90,6 +90,7 @@
 						</table>
 					<?php endif; ?>
 				</div>
+				<p><?php echo lang('msg_last_update') ?></p>
 			</div>
 			<!--/ box -->
 

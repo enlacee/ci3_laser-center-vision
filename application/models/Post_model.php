@@ -36,9 +36,12 @@ class Post_model  extends CI_Model {
     ) {
         $str_post_type = str_replace('-', '_', $post_type);
         $strRows = (int) $rows;
-        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $str_post_type.$category.'_'.$status.'_'.$strRows.'_'.$order.$limit.'_'.$offset.'_'.$this->id_lang;
+        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $str_post_type.'_' . $category.'_'
+            . $status . '_' . $strRows . '_' . $order . '_' . $limit . '_' . $offset .'_'
+            . $this->id_lang;
+        $rs = $this->cache->file->get($keyCache);
 
-        if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
+        if ($rs == false) {
             $this->db->select()->from($this->_name);
             $this->db->where('post_type', $post_type);
             if(!empty($category)) {
@@ -82,8 +85,10 @@ class Post_model  extends CI_Model {
 
     public function getByTitle($title)
     {
-        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $title.'_'.$this->id_lang;;
-        if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
+        $keyCache = __CLASS__ . __FUNCTION__ .'_'. $title.'_'.$this->id_lang;
+        $rs = $this->cache->file->get($keyCache);
+
+        if ($rs == false) {
             $this->db->select()->from($this->_name);
             $this->db->like('title_seo', $title);
             $this->db->where('id_language', $this->id_lang);
@@ -107,7 +112,7 @@ class Post_model  extends CI_Model {
         $keyCache = __CLASS__ . __FUNCTION__ . '_' . 'home'.'_'.$this->id_lang;;
         $rs = $this->cache->file->get($keyCache);
 
-        if (true/*$rs == false*/) {
+        if ($rs == false) {
             $this->db->select()->from($this->_name);
             $this->db->where('id_language', $this->id_lang);
             $this->db->where('post_type', Post_model::TIPO_POST);

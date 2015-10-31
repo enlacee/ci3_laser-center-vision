@@ -24,9 +24,10 @@ class Note_model  extends CI_Model {
     ) {
         $strRows = (int) $rows;
         $keyCache = __CLASS__ . __FUNCTION__ . $status.'_'.$strRows.'_'
-        . $order. '_' . $limit.'_'.$offset.'_'.$this->id_lang;;
+            . $order. '_' . $limit.'_'.$offset.'_'.$this->id_lang;
+        $rs = $this->cache->file->get($keyCache);
 
-        if (true/*($rs = $this->cache->file->get($keyCache)) == false*/) {
+        if ($rs == false) {
             $this->db->select()->from($this->_table);
             if(!empty($status)) {
                 $this->db->where('status', $status);

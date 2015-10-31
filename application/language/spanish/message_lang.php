@@ -85,3 +85,4 @@ $lang['msg_hour'] = 'Hora';
 $lang['msg_minutes'] = 'Minnutos';
 $lang['msg_message_form2'] = 'Detalle del problema visual que presenta el paciente';
 $lang['msg_set_message_form2'] = 'Coloque los detalles de su consulta';
+$lang['msg_last_update'] = 'Última actualización: Enero 2015';

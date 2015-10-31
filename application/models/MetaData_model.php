@@ -18,7 +18,7 @@ class MetaData_model  extends CI_Model {
             . '_' . $limit . '_' . $offset . '_' . $this->id_lang;
         $rs = $this->cache->file->get($keyCache);
 
-        if (true/*$rs == false*/) {
+        if ($rs == false) {
             $this->db->select('meta_value')->from($this->_table);
             if(!empty($metaKey)) {
                 $this->db->where('meta_key', $metaKey);
