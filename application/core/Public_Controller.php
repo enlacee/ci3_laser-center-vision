@@ -122,7 +122,7 @@ class Public_Controller extends MY_Controller
         ));
 
         $this->load->vars(array(
-            'interes' => $this->MetaData_model->getAll('form_problem_visual', 18)
+            'interesOpt' => $this->MetaData_model->getAll('form_problem_visual', 18)
         ));
 
     }

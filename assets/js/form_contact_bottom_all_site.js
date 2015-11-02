@@ -104,7 +104,7 @@ $(document).ready(function() {
             cache: false,
             type: "POST",
             dataType: "json",
-            url: "/home/send_form_contact_all_site",
+            url: $("#formContacto").attr('action'),
             data: form_serialize + "&id=" + Math.random(),
             success: function (response) {
 

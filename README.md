@@ -28,3 +28,12 @@ http://lasercenter.dev/admin/edit/1la-mejor-solucion-a-sus-problemas-visuales
 ```
 http://lasercenter.dev/admin/edit/2services-of-ophthalmology-quito-ecuador
 ```
+
+## Mail Contact
+
+Send mail to in file `application/config/config_site.php`
+
+```
+	//Email contact
+	$config['cs_email_contact'] = 'peperios@mailinator.com';
+```

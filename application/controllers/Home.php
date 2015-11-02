@@ -88,6 +88,7 @@ class Home extends Public_Controller {
 				'email' => $this->security->xss_clean($this->input->post('email')),
 				'mensaje' => $this->security->xss_clean($this->input->post('mensaje'))
 			);
+
 			if (!empty($dataPost['nombre']) && !empty($dataPost['email'])) {
 				$this->load->library('email');// load email library
 				$this->email->clear();

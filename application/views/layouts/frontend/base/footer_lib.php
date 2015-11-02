@@ -3,4 +3,3 @@
 <script src="<?php echo base_url() ?>assets/lib/formvalidation.io/dist/js/formValidation.min.js"></script>
 <script src="<?php echo base_url() ?>assets/lib/formvalidation.io/dist/js/framework/bootstrap.min.js"></script>
 <script src="<?php echo base_url() ?>assets/js/script.js"></script>
-<script src="<?php echo base_url() ?>assets/js/form_contact_bottom_all_site.js"></script>
