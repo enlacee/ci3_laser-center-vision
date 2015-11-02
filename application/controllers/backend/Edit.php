@@ -19,10 +19,9 @@ class Edit extends Admin_Controller {
 		$this->breadcrumbs->push('Listado', '/admin/listado');
 		$this->breadcrumbs->push('Editar', '#');
 
-		//Layout options
-		$this->layout->css( array('/assets/backend/css/additional.css') );
-		$this->layout->js( array('/assets/backend/js/additional.js') );
-		
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+
 		$data = array();
 		if ($this->input->post()) {
 			$mydata = $this->input->post();
@@ -37,6 +36,8 @@ class Edit extends Admin_Controller {
 		$data['data'] = $this->getData();
 
 		//Layout load view
+		$this->layout->css( array('/assets/backend/css/additional.css') );
+		$this->layout->js( array('/assets/backend/js/additional.js') );
 		$this->layout->view('backend/edit/index', $data);
 	}
 
@@ -44,7 +45,7 @@ class Edit extends Admin_Controller {
 	* set idLanguage (1= spanish,2 = english)
 	*/
 	public function getData()
-	{	
+	{
 		$data = array();
 		$page = $this->uri->segment(1);
 		$subPage = $this->uri->segment(2);
@@ -57,11 +58,11 @@ class Edit extends Admin_Controller {
 		}
 		// set $this->id_lang (id languague general)
 		$this->id_lang = $idLang;
- 
+
 		if (!empty($title)) {
 			$title = str_replace('-', ' ', $title);
 			$data = $this->Post_model->getByTitle($title);
-			
+
 		}
 
 		return $data;

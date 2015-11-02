@@ -6,7 +6,7 @@
       </pre>
       <div class="row">
         <div class="col-xs-12 frame">
-          
+
           <div class="boxes">
 
             <div class="boxes_head">
@@ -15,12 +15,13 @@
               <!--Breadcrumbs-->
               <?php echo $this->breadcrumbs->show(); ?>
               <!--End Breadcrumbs-->
-              
+
               </div><!--End boxes_head-->
 
             <div class="boxes_body">
-
-              <form action="" method="POST" class="form-horizontal"id="form" role="form" enctype="multipart/form-data">
+            <?php $attributes = array('class' => 'form-horizontal', 'id' => 'form', 'enctype' => 'multipart/form-data'); ?>
+            <?php echo form_open('', $attributes); ?>
+              <!--<form action="" method="POST" class="form-horizontal"id="form" role="form" enctype="multipart/form-data">-->
 
               <table id="table_id" class="table_form table table-striped table-bordered table-hover table-condensed display">
                 <tbody>
@@ -58,7 +59,7 @@
                     <td><span>title_seo:</span></td>
                     <td>
                       <div class="form-group">
-                        <input type="text" class="form-control" id="title_seo" name="title_seo" 
+                        <input type="text" class="form-control" id="title_seo" name="title_seo"
                         value="<?php echo !empty($data['title_seo']) ? $data['title_seo'] : '' ?>" >
                       </div>
                     </td>
@@ -81,7 +82,7 @@
                     </td>
                   </tr>
 
-                  
+
 
                   <tr>
                     <td><span>Acciones</span></td>
@@ -102,7 +103,7 @@
         </div>
       </div>
     </div>
-  </article><!--End article-->  
+  </article><!--End article-->
 </section>
 <?php else: ?>
   registro no encontrado.
