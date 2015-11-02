@@ -101,7 +101,7 @@ class Post extends Public_Controller {
 			}
 		}
 
-		$this->layout->js(array('/assets/js/form_contact_bottom_all_site.js'));
+		//$this->layout->js(array('/assets/js/form_contact_bottom_all_site.js'));
 		$this->layout->view('frontend/post/contact', $this->input->post());
 	}
 

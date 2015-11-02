@@ -1,11 +1,9 @@
-<h1><?php echo lang('msg_form_cantact_title') ?></h1>
-<div class="box">
     <div class="">
-        <?php echo validation_errors(); ?>
+        <?php //echo validation_errors(); ?>
     </div>
 
     <?php $attributes = array('class' => 'formContacto', 'id' => 'formContacto'); ?>
-    <?php echo form_open('', $attributes); ?>
+    <?php echo form_open(base_url('post/contact'), $attributes); ?>
     <fieldset id="datosForm">
 
       <div class="row clearfix">
@@ -143,7 +141,3 @@
 
     </fieldset>
   </form>
-
-
-
-</div>

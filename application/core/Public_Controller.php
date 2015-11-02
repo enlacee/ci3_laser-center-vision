@@ -15,6 +15,9 @@ class Public_Controller extends MY_Controller
         $this->load->helper(array(
             'my_ayuda_helper'
         ));
+        // contact validation
+		$this->load->helper('form');
+		$this->load->library('form_validation');
 
         $this->loadVariables();
 /*
