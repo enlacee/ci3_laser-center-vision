@@ -30,25 +30,15 @@ http://lasercenter.dev/admin/edit/2services-of-ophthalmology-quito-ecuador
 ```
 
 ## Mail Contact
-
-For send mail require `config application/config/email.php`
-
-```
-<?php
-    $config['protocol'] = 'smtp';
-    $config['smtp_host'] = 'ssl://smtp.gmail.com';
-    $config['smtp_port'] = '465';
-    $config['smtp_user'] = 'xxx@gmail.com'; //change this
-    $config['smtp_pass'] = 'xxx';
-    $config['mailtype'] = 'html';
-	$config['charset'] = 'UTF-8';
-    $config['wordwrap'] = TRUE;
-    $config['newline'] = "\r\n";
-```
-
-Send mail to contact config `application/config/config_site.php`
+Config email for Send mail to contact config `application/config/config_site.php`
 
 ```
-	//Email contact
-	$config['cs_email_contact'] = 'peperios@mailinator.com';
+//Email contact
+$config['cs_email_from'] = 'contacto@tb.com.ve';
+$config['cs_email_from_name'] = 'Company tb.com.ve';
+$config['cs_email_contact'] = 'peperios@mailinator.com';
 ```
+
+## Test Mail
+
+http://localhost/`testmail`

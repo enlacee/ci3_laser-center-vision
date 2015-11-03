@@ -47,6 +47,8 @@ $config['cs_youtube'] = '@youtube';
 $config['cs_instagram'] = '@instagram';
 
 //Email contact
+$config['cs_email_from'] = 'contacto@tb.com.ve';
+$config['cs_email_from_name'] = 'Company tb.com.ve';
 $config['cs_email_contact'] = 'peperios@mailinator.com';
 /**
 * Extra by anibal

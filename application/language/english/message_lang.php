@@ -38,6 +38,7 @@ $lang["msg_set_message"] = "Message here";
 $lang["msg_send_consult"] = "Send Consult";
 $lang["msg_send"] = "Send";
 $lang["msg_back"] = "Back";
+$lang["msg_us_clinic"] = "Us Clinic";
 $lang["msg_information"] = "Information";
 $lang["msg_red_of_contact"] = "Networks Contacts";
 $lang["msg_insurance"] = "Nsurances";

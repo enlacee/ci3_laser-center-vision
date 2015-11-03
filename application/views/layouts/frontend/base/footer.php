@@ -54,7 +54,7 @@
 	  <!-- Box -->
 	  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 box box_1 sm568Max_width_100">
 	  	<div class="box_ctn">
-		    <h3>Nuestra Clínica</h3>
+		    <h3><?php echo mb_strtoupper(lang('msg_us_clinic')) ?></h3>
 		    <ul>
 		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_1')) ?>"><?php echo lang('msg_footer_us')?></a></li>
 		      <li><a href="<?php echo base_url_lang(''.lang('msg_footer_2')) ?>"><?php echo lang('msg_footer_mission_vision')?></a></li>

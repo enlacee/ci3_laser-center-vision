@@ -144,18 +144,11 @@ class Post extends Public_Controller {
 		if (!empty($dataPost['nombre']) && !empty($dataPost['email'])) {
 			$this->load->library('email');// load email library
 			$this->email->clear(TRUE);
-/*
-		    $this->email->to('detopst.tk@gmail.com');
-		    $this->email->from('acopitan@gmail.com');
-		    $this->email->subject('Here is your info ccc');
-		    $this->email->message('Hi ccc Here is the info you requested.');
-
-			$rs = (!$this->email->send());
-			// var_dump($this->email->print_debugger());exit;
-*/
-
-			$this->load->library('email');// load email library
-		    $this->email->from($this->config->item('smtp_user'), $this->config->item('cs_name'));
+			
+			$this->email->from(
+				$this->config->item('cs_email_from'),
+				$this->config->item('cs_email_from_name')
+			);
 		    $this->email->to($this->config->item('cs_email_contact'));
 		    $this->email->subject("Mensaje Contacto *" . $dataPost['nombre']);
 			$this->email->set_mailtype('html');
@@ -175,7 +168,6 @@ class Post extends Public_Controller {
 			}
 		}
 
-
 		return $response;
 	}
 
@@ -186,17 +178,19 @@ class Post extends Public_Controller {
 	{
 	$this->load->library('email');
 
-	$this->email->from('detops.tk@gmail.com', 'Pepe Rios');
-	$this->email->to('acopitan@hotmail.com'); 
+	$this->email->from(
+		$this->config->item('cs_email_from'),
+		$this->config->item('cs_email_from_name')
+	);
+	$this->email->to($this->config->item('cs_email_contact')); 
 	//$this->email->cc('another@another-example.com'); 
-	//$this->email->bcc('them@their-example.com'); 
-
-	$this->email->subject('Email Test');
+	//$this->email->bcc('them@their-example.com');
+	$this->email->subject('Email Test PepeRios');
 	$this->email->message('Testing the email class. '. base_url());	
-
 	$this->email->send();
 
-	echo $this->email->print_debugger();	
+	//$this->load->view('frontend/_emails/contact', array('data' => ''));
+	var_dump($this->email->print_debugger());
 	}
 
 }
