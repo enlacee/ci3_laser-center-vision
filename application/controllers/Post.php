@@ -29,7 +29,6 @@ class Post extends Public_Controller {
 			$this->layout->setSocialTitle($result['title_seo']);
 			$this->layout->setSocialResumen("Resumen");
 			$this->layout->setSocialDescripcion($descriptionSeo);
-
 		}
 
 		//Layout load view
@@ -110,15 +109,15 @@ class Post extends Public_Controller {
 	*/
 	protected function conctacValidate()
 	{
-        $this->form_validation->set_rules('nombres', lang('msg_name_complete'),'trim|required|min_length[2]');
-        $this->form_validation->set_rules('edad', lang('msg_age'),'trim|required');
-        $this->form_validation->set_rules('direccion', lang('msg_address'),'trim|required');
-        $this->form_validation->set_rules('ciudad', lang('msg_city'),'trim|required');
-        $this->form_validation->set_rules('telefono', lang('msg_telephone_contact'),'trim|required');
-        $this->form_validation->set_rules('celular', lang('msg_cell_phone'),'trim|required');
-        $this->form_validation->set_rules('email', lang('msg_email'),'trim|required|valid_email');
-        $this->form_validation->set_rules('interes', lang('msg_visual_problem'),'trim|required');
-        $this->form_validation->set_rules('mensaje', lang('msg_message'),'trim|required');
+        $this->form_validation->set_rules('nombres', lang('msg_name_complete'),'trim|required|strip_tag|min_length[2]');
+        $this->form_validation->set_rules('edad', lang('msg_age'),'trim|required|strip_tag');
+        $this->form_validation->set_rules('direccion', lang('msg_address'),'trim|required|strip_tag');
+        $this->form_validation->set_rules('ciudad', lang('msg_city'),'trim|required|strip_tag');
+        $this->form_validation->set_rules('telefono', lang('msg_telephone_contact'),'trim|required|strip_tag');
+        $this->form_validation->set_rules('celular', lang('msg_cell_phone'),'trim|required|strip_tag');
+        $this->form_validation->set_rules('email', lang('msg_email'),'trim|required|valid_email|strip_tag');
+        $this->form_validation->set_rules('interes', lang('msg_visual_problem'),'trim|required|strip_tag');
+        $this->form_validation->set_rules('mensaje', lang('msg_message'),'trim|required|strip_tag');
 	}
 
 	/**
