@@ -14,7 +14,7 @@ $config['composer_autoload'] = FCPATH.'vendor/autoload.php';
 
 function __autoload($class)
 {
-echo " autoload_anibal ".$class;
+//echo " autoload_anibal ".$class;
  /*if(strpos($class, 'CI_') !== 0)
  {
   @include_once( APPPATH . 'core/'. $class . '.php' );

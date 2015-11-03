@@ -179,5 +179,24 @@ class Post extends Public_Controller {
 		return $response;
 	}
 
+	/**
+	* Send mail test
+	*/
+	public function testMail()
+	{
+	$this->load->library('email');
+
+	$this->email->from('detops.tk@gmail.com', 'Pepe Rios');
+	$this->email->to('acopitan@hotmail.com'); 
+	//$this->email->cc('another@another-example.com'); 
+	//$this->email->bcc('them@their-example.com'); 
+
+	$this->email->subject('Email Test');
+	$this->email->message('Testing the email class. '. base_url());	
+
+	$this->email->send();
+
+	echo $this->email->print_debugger();	
+	}
 
 }
