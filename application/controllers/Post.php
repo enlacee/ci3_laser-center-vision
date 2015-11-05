@@ -81,6 +81,7 @@ class Post extends Public_Controller {
 		$this->load->model('MetaData_model');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
+		$this->load->helper('security');
 
 		$page = $this->uri->segment(1);
 		$subPage = $this->uri->segment(2);
@@ -91,8 +92,9 @@ class Post extends Public_Controller {
 			$this->layout->setTitle(ucfirst($title));
 		}
 
-
-		if ($this->input->post() || $this->input->is_ajax_request()) {
+		if ($this->input->server('REQUEST_METHOD') == 'POST'
+			|| $this->input->is_ajax_request()
+		) {
 			$this->conctacValidate();
 			if ($this->form_validation->run()) {
 				$response = $this->sendMailContact();
@@ -109,16 +111,26 @@ class Post extends Public_Controller {
 	*/
 	protected function conctacValidate()
 	{
-        $this->form_validation->set_rules('nombres', lang('msg_name_complete'),'trim|required|strip_tag|min_length[2]');
-        $this->form_validation->set_rules('edad', lang('msg_age'),'trim|required|strip_tag');
-        $this->form_validation->set_rules('direccion', lang('msg_address'),'trim|required|strip_tag');
-        $this->form_validation->set_rules('ciudad', lang('msg_city'),'trim|required|strip_tag');
-        $this->form_validation->set_rules('telefono', lang('msg_telephone_contact'),'trim|required|strip_tag');
-        $this->form_validation->set_rules('celular', lang('msg_cell_phone'),'trim|required|strip_tag');
-        $this->form_validation->set_rules('email', lang('msg_email'),'trim|required|valid_email|strip_tag');
-        $this->form_validation->set_rules('interes', lang('msg_visual_problem'),'trim|required|strip_tag');
-        $this->form_validation->set_rules('mensaje', lang('msg_message'),'trim|required|strip_tag');
+        $this->form_validation->set_rules('nombres', 	lang('msg_name_complete'),		'trim|required|callback_string_tag_check|min_length[2]');
+        $this->form_validation->set_rules('edad', 		lang('msg_age'),				'trim|required|callback_string_tag_check');
+        $this->form_validation->set_rules('direccion', 	lang('msg_address'),			'trim|required|callback_string_tag_check');
+        $this->form_validation->set_rules('ciudad', 	lang('msg_city'),				'trim|required|callback_string_tag_check');
+        $this->form_validation->set_rules('telefono', 	lang('msg_telephone_contact'),	'trim|required|callback_string_tag_check');
+        $this->form_validation->set_rules('celular', 	lang('msg_cell_phone'),			'trim|required|callback_string_tag_check');
+        $this->form_validation->set_rules('email', 		lang('msg_email'),				'trim|required|callback_string_tag_check|valid_email');
+        $this->form_validation->set_rules('interes', 	lang('msg_visual_problem'),		'trim|required|callback_string_tag_check');
+        $this->form_validation->set_rules('mensaje', 	lang('msg_message'),			'trim|required|callback_string_tag_check');
 	}
+
+    public function string_tag_check($string)
+    {
+        if (strlen($string) != strlen(strip_tags($string))) {
+            $this->form_validation->set_message('string_check', 'The {field} field can not be the send with tags');
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
 
 	/**
 	* send mail by POST
@@ -129,15 +141,15 @@ class Post extends Public_Controller {
 		$response = false;
 
 		$dataPost = array(
-			'nombre' => $this->security->xss_clean($this->input->post('nombres')),
-			'edad' => $this->security->xss_clean($this->input->post('edad')),
-			'direccion' => $this->security->xss_clean($this->input->post('direccion')),
-			'ciudad' => $this->security->xss_clean($this->input->post('ciudad')),
-			'telefono' => $this->security->xss_clean($this->input->post('telefono')),
-			'celular' => $this->security->xss_clean($this->input->post('celular')),
-			'interes' => $this->security->xss_clean($this->input->post('interes')),
-			'email' => $this->security->xss_clean($this->input->post('email')),
-			'mensaje' => $this->security->xss_clean($this->input->post('mensaje'))
+			'nombre'	=> $this->input->post('nombres', true),
+			'edad' 		=> $this->input->post('edad', true),
+			'direccion' => $this->input->post('direccion', true),
+			'ciudad' 	=> $this->input->post('ciudad', true),
+			'telefono' 	=> $this->input->post('telefono', true),
+			'celular' 	=> $this->input->post('celular', true),
+			'interes' 	=> $this->input->post('interes', true),
+			'email' 	=> $this->input->post('email', true),
+			'mensaje' 	=> $this->input->post('mensaje', true)
 		);
 
 		if (!empty($dataPost['nombre']) && !empty($dataPost['email'])) {
@@ -161,8 +173,8 @@ class Post extends Public_Controller {
 		        );
 			} else {
 				$response = array(
-					'respuesta' => false,
-					'mensaje' => "No se envio pudo enviar tu correo, intentelo luego"
+					'respuesta' => true,
+					'mensaje' => "Mensaje enviado!." // message error
 				);
 			}
 		}
