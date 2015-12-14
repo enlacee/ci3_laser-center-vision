@@ -51,13 +51,7 @@ class Public_Controller extends MY_Controller
         $this->load->model('MetaData_model');
 
         $this->load->vars(array(
-            'pagesMenu' =>$this->Post_model->getAll(
-                Post_model::TIPO_POST,
-                Post_model::CATEGORY_MAIN_MENU,
-                Post_model::STATUS_TRUE,
-                'order_asc',
-                8
-            )
+            'pagesMenu' => $this->reorderPagesMenu()
         ));
 
         $this->load->vars(array(
@@ -129,4 +123,28 @@ class Public_Controller extends MY_Controller
         ));
 
     }
+
+	private function reorderPagesMenu()
+	{
+		$rs = $this->Post_model->getAll(
+			Post_model::TIPO_POST,
+			Post_model::CATEGORY_MAIN_MENU,
+			Post_model::STATUS_TRUE,
+			'order_asc',
+			10
+		);
+
+		
+		$pages = array();
+		foreach ($rs as $key => $value) {
+			$pages[$key] = $value;
+			if (isset($value['id_parent']) && !empty($value['id_parent'])) {
+				$pages[$key]['sub_page'][] = $value;
+			}
+			
+		}
+		//echo "<pre>"; print_r($pages);exit;
+		return $pages;
+	}
+
 }

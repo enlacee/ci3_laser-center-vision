@@ -24,3 +24,6 @@
 		<i class="fa fa-bars oculto"></i>
 	</nav>
 	<!--/ Main -->
+
+	
+	<p class="bold" style="text-align: center;font-weight: 3pc;">

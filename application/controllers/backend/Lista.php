@@ -12,15 +12,15 @@ class Lista extends CI_Controller {
 	public function index()
 	{
 		//Breadcrumbs
-    $this->breadcrumbs->push('Home', '/');
-    $this->breadcrumbs->push('Listado', '#');
+		$this->breadcrumbs->push('Home', '/');
+		$this->breadcrumbs->push('Listado', '#');
 
 		//Layout options
 		$this->layout->css( array('/assets/backend/css/additional.css') );
 		$this->layout->js( array('/assets/backend/js/additional.js') );
-		
+
 		$data["info"] = "Información";
-		
+
 		//Layout load view
 		$this->layout->view('backend/lista/index', $data);
 	}

@@ -62,6 +62,9 @@
 				<a href="https://twitter.com/LCVision2020" target="_blank">
 					<img src="<?php echo base_url() ?>assets/images/logos/twitter.jpg" alt="Siguenos en Twitter">
 				</a>
+				<a href="#" target="_blank">
+					<img src="<?php echo base_url() ?>assets/images/skype.png" alt="Siguenos en Twitter">
+				</a>
 			</div>
 			<!--/ box -->
 
