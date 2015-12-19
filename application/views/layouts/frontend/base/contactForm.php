@@ -2,6 +2,11 @@
         <?php //echo validation_errors(); ?>
     </div>
 
+    <h3 style="
+    font-weight: bold;
+    font-size: 15px;
+    padding: 6% 0 2% 0;"><?php echo lang('msg_form_cantact_h2') ?></h3>
+
     <?php $attributes = array('class' => 'formContacto', 'id' => 'formContacto'); ?>
     <?php echo form_open(base_url('post/contact'), $attributes); ?>
     <fieldset id="datosForm">

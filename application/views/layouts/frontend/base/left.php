@@ -4,7 +4,7 @@
 		<div class="main_left">
 			<!-- Box -->
 			<div class="box">
-				<h3><i class="fa fa-check-square-o"></i><?php echo mb_strtoupper(lang('msg_cirugia')) ?></h3>
+				<h3><i class="fa fa-check-square-o"></i><?php echo mb_strtoupper(lang('msg_cirugias')) ?></h3>
 				<?php $pages = $this->load->get_var('pagesCirugia'); ?>
 				<?php if(!empty($pages) && count($pages) > 0) : ?>
 				<ul>
@@ -62,13 +62,13 @@
 				<a href="https://twitter.com/LCVision2020" target="_blank">
 					<img src="<?php echo base_url() ?>assets/images/logos/twitter.jpg" alt="Siguenos en Twitter">
 				</a>
-				<a href="#" target="_blank">
+				<a href="skype:lcvision2020?call">
 					<img src="<?php echo base_url() ?>assets/images/skype.png" alt="Siguenos en Twitter">
 				</a>
 			</div>
 			<!--/ box -->
 
-			<!-- Box -->
+			<?php if (getIdLanguage() == 1) : ?>
 			<div class="box">
 				<h3><i class="fa fa-check-square-o"></i><?php echo mb_strtoupper(lang('msg_cirugias')) ?></h3>
 				<p><?php echo lang('msg_cirugias_text') ?></p>
@@ -94,9 +94,8 @@
 					<?php endif; ?>
 				</div>
 				<p><?php echo lang('msg_last_update') ?></p>
-			</div>
-			<!--/ box -->
-
+			</div><!--/ box -->
+			<?php endif; ?>
 		</div>
 	</div>
 </div>

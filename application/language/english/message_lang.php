@@ -13,10 +13,10 @@ $lang["msg_cirugia"] = "Surgerie";
 $lang["msg_cirugias"] = "Surgeries";
 $lang["msg_total_de_cirugias"] = "Total surgeries";
 $lang["msg_cirugias_text"] = "Surgeries performed this year at the clinic.";
-$lang["msg_associated_insurance"] = "Associated Insurance";
-$lang["msg_thecnologie"] = "Thecnolgie";
-$lang["msg_quizs"] = "Examens";
-$lang["msg_follow_us"] = "Follow";
+$lang["msg_associated_insurance"] = "Associated Insurances";
+$lang["msg_thecnologie"] = "Technology";
+$lang["msg_quizs"] = "Eye Exams";
+$lang["msg_follow_us"] = "Follow us";
 $lang["msg_name_complete"] = "Name";
 $lang["msg_set_name_complete"] = "your name here";
 $lang["msg_age"] = "Age";
@@ -44,8 +44,7 @@ $lang["msg_red_of_contact"] = "Networks Contacts";
 $lang["msg_insurance"] = "Nsurances";
 //html
 $lang["msg_send_box_address"] = "
-Av. 6 de Diciembre N-3402 Accross the street from Eloy Alfaro and Checoslovaquia, to one block Nort of the Consejo Nacional Electoral
-Consult prev date to thelephones";
+6 de Diciembre Ave. N-3402 between Eloy Alfaro y Checoslovaquia, one block north of National Electoral Council. Attention with previous appointment to phones: (+593 2) 2250324 / 2241335 / 2257105 / 0969093943 <a href='mailto:info@lasercentervision2020.com?Subject=Hello%20Laser Center' target='_top'>info@lasercentervision2020.com</a> ";
 // url footer
 $lang["msg_footer_1"] = 'the-ophthalmology-clinic-quito-ecuador#quienes';
 $lang["msg_footer_2"] = 'the-ophthalmology-clinic-quito-ecuador#mision';
@@ -54,16 +53,19 @@ $lang["msg_footer_4"] = 'location-clinic-laser-center-vision';
 $lang["msg_footer_5"] = 'services-of-ophthalmology-quito-ecuador';
 $lang["msg_footer_6"] = 'question-eye-surgery-quito-ecuador';
 $lang["msg_footer_7"] = 'videos-testimonios-eye-operations-quito-ecuador';
-$lang["msg_footer_contact"] = 'contact';
-$lang["msg_footer_reservations"] = 'reservations';
-$lang["msg_footer_technologie"] = 'Technologie';
-$lang["msg_footer_quiz_visual"] = 'Test visual';
+$lang["msg_footer_contact"] = 'Contact';
+$lang["msg_footer_reservations"] = 'Reservations';
+$lang["msg_footer_technologie"] = 'Our Technology';
+$lang["msg_footer_quiz_visual"] = 'Eye Exams';
 $lang["msg_footer_frequent_questions"] = 'Frequent Questions';
 $lang["msg_footer_testimonials"] = 'Testimonials';
+$lang["msg_footer_contact"] = 'Ask Doctor';
+$lang["msg_footer_contact_online"] = 'Online Appointment';
+
 // more footer
-$lang["msg_footer_us"] = 'Us';
-$lang["msg_footer_mission_vision"] = 'Mission Vision';
-$lang["msg_footer_medical_box"] = 'Medical Box'; // Cuadro medico
+$lang["msg_footer_us"] = 'About Us';
+$lang["msg_footer_mission_vision"] = 'Mission and Vision';
+$lang["msg_footer_medical_box"] = 'Medical Staff'; // Cuadro medico
 $lang["msg_footer_location"] = 'Location';
 $lang["msg_footer_technologie"] = 'Technologie';
 $lang["msg_footer_frequent_questions"] = 'Frequent Questions';
@@ -72,6 +74,7 @@ $lang["msg_footer_testimonials"] = 'Testimonials';
 $lang["msg_record_not_found"] = 'record not found';
 // form contact
 $lang['msg_form_cantact_title'] = 'ENQUIRY FORM OFTALMOLOGICA';
+$lang['msg_form_cantact_h2'] = 'Do you need additional information? Please fill the following form';
 // form 02
 $lang['msg_form2_title'] = 'QUOTE FORM VIRTUAL OFTALMOLÓGICA';
 $lang['msg_form2_description'] = 'Complete the form carefully to book a date for the appointment.';

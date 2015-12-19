@@ -45,7 +45,7 @@ $lang["msg_insurance"] = "Aseguradoras";
 //html
 $lang["msg_send_box_address"] = "
 Av. 6 de Diciembre N-3402 entre Eloy Alfaro y Checoslovaquia, una cuadra al norte del Consejo Nacional Electoral
-Consultas previa cita a los teléfonos";
+Consultas previa cita a los teléfonos <a href='mailto:info@lasercentervision2020.com?Subject=Hola%20Laser Center' target='_top'>info@lasercentervision2020.com</a> ";
 // url footer
 $lang["msg_footer_1"] = 'clinicas-oftalmologicas-quito-ecuador#quienes';
 $lang["msg_footer_2"] = 'clinicas-oftalmologicas-quito-ecuador#mision';
@@ -54,8 +54,9 @@ $lang["msg_footer_4"] = 'ubicacion-clinica-laser-center-vision';
 $lang["msg_footer_5"] = 'servicios-de-oftalmologia-quito-ecuador';
 $lang["msg_footer_6"] = 'preguntas-de-cirugia-de-ojos-quito-ecuador';
 $lang["msg_footer_7"] = 'videos-testimonios-de-operaciones-de-ojos-quito-ecuador';
-$lang["msg_footer_contact"] = 'contacto';
-$lang["msg_footer_reservations"] = 'reservas';
+$lang["msg_footer_contact"] = 'Contacto';
+$lang["msg_footer_reservations"] = 'Reservas';
+$lang["msg_footer_contact_online"] = 'Online';
 //
 $lang["msg_footer_us"] = 'Quienes Somos?';
 $lang["msg_footer_mission_vision"] = 'Misión Visión';
@@ -69,6 +70,7 @@ $lang["msg_footer_testimonials"] = 'Testimonios';
 $lang["msg_record_not_found"] = 'registro no encontrado';
 // form contact
 $lang['msg_form_cantact_title'] = 'FORMULARIO DE CONSULTA OFTALMOLÓGICA';
+$lang['msg_form_cantact_h2'] = 'Necesitas mas información Porfavor llena el siguiente formulario';
 // form 02
 $lang['msg_form2_title'] = 'FORMULARIO DE CONSULTA OFTALMOLÓGICA';
 $lang['msg_form2_description'] = 'Complete cuidadosamente su formulario para reservar una fecha para la cita';
@@ -87,4 +89,4 @@ $lang['msg_minutes'] = 'Minnutos';
 $lang['msg_message_form2'] = 'Detalle del problema visual que presenta el paciente';
 $lang['msg_set_message_form2'] = 'Coloque los detalles de su consulta';
 $lang['msg_last_update'] = 'Última actualización: Enero 2015';
-$lang['msg_english_version'] = 'English Versión';
+$lang['msg_english_version'] = 'Version Español';
